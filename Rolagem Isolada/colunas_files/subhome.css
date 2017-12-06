@@ -1,0 +1,381 @@
+#Hidden_OAS_x01{margin-bottom: 30px;}
+/*
+.sub {margin-bottom: 30px;}
+.sub nav li, .sub nav li a{color:#000;position: relative; -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+.sub nav ul{white-space: nowrap;}
+.sub nav li a:hover{ text-shadow:-1px 0 0px black, 0 0 0px black, 0 0 0px black}
+.sub nav li a:hover{ font-weight: 900;}
+.sub li .subitem{display: none; height: 0; -webkit-transition:height 2s; transition:height  2s;}
+.sub nav li:hover .subitem{height: auto; display: block; position: absolute; background: #FFF; z-index: 999; width: 100%;}
+*/
+.submenu ul.subitem li, .submenu ul.subitem li a{border: none;}
+
+.subhome{margin-top: 25px;}
+.compartilhe{display: inline-block; margin-left: 0px; position: relative;z-index: 10;}
+.midiassociais{position: absolute;right: 0;margin-left: 0;}
+.agenciaestado{width: 72px; height: 26px; text-indent: -999px; overflow: hidden; display: inline-block; background: url(../img/logos/agencia-estado.png) 0 0 no-repeat;}
+
+.broadcastestado {
+width: 130px;
+height: 38px;
+text-indent: -999px;
+overflow: hidden;
+display: inline-block;
+background: url(../img/logos/broadcast.png) 0 0 no-repeat;
+}
+
+
+.artigo header, .artigosdia header{border-top: 1px solid rgb(188,190,192);padding-bottom: 5px; min-height: 30px;}
+.artigo .chapeu, .artigosdia .chapeu {display: inline;}
+.artigo .chapeu a, .artigosdia .chapeu a{font:bold 12px/14px arial; text-transform: uppercase; color: rgb(52, 91, 136);position: relative;top: 6px;}
+
+.artigo .controles li, .artigosdia .controles li{display: inline;}
+.artigo .controles .comentario a, .artigosdia .controles .comentario a,.slideshare .controles .comentario a{background: url(../img/sprites/noticia.gif) 0 6px no-repeat;font: 9px Arial; text-transform: uppercase; color: rgb(77, 77, 79); border-right: 1px solid rgb(188,190,192); padding: 6px 8px 2px 21px; display: inline-block;}
+.slideshare .controles{top: 20px;right: 33px;}
+.slideshare .compartilhe{background-color: #777;padding: 2px;}
+.slideshare .compartilhe a {background: url(../img/sprites/comentario.png) 2px -184px no-repeat;}
+.slideshare .compartilhar_link{color: #FFF !important;font: 10px arial;}
+.comentario a{border-right:none;visibility: hidden}
+
+.artigo{padding-bottom: 30px; overflow: visible;}
+.artigo > a{color: rgb(77,77,78);}
+.artigo .titulo{color: #000000 !important;font:35px/40px "EstLineBold", "Georgia", "Times new roman"; padding-bottom: 21px; margin-top: 10px}
+.today .artigo .titulo {color: #000000 !important; font:45px/48px "EstLineBold", "Georgia", "Times new roman"; }
+.artigo .autor{font:10px/12px "EstLineBold", "Times new roman"; text-transform: uppercase; padding-bottom: 6px;}
+.artigo p{font:16px/20px Arial;}
+
+.data{border-top: 1px solid rgb(188,190,192); font:12px/11px "Arial Black", arial; text-transform: uppercase; color: rgb(77, 77, 79); padding: 9px 0 10px;}
+
+.relacionadas{margin-top: 10px;}
+.relacionadas a{color: rgb(86, 145, 208);font:13px/20px Arial; padding-left: 18px;}
+.relacionadas a strong{font-weight: bold;}
+.relacionadas li{overflow: hidden;}
+.relacionadas li .autor{text-transform: uppercase; color: #000; font-size: 10px;}
+.relacionadas li a{overflow: hidden; background: url(../img/sprites/bullets.png) 999px 999px no-repeat;}
+.relacionadas li a strong{font-weight: bold;}
+.relacionadas .mais a{background-position: 1px 1px;}
+.relacionadas .foto a{background-position: 1px -56px;}
+.relacionadas .video a{background-position: 0px -113px;}
+.relacionadas .infografico a{background-position: 1px -170px;}
+.relacionadas .audio a{background-position: 1px -229px;}
+.relacionadas .asterisco a{background-position: 1px -286px;}
+.relacionadas .forum a{background-position: 0px -344px;}
+.relacionadas .podcast a{background-position: 2px -400px;}
+.relacionadas .listas a{background-position: 0px -458px;}
+.relacionadas .trailer a{background-position: 0px -515px;}
+.relacionadas .tabelas a{background-position: 0px -573px;}
+.relacionadas .especial a{background-position: 2px -629px;}
+.relacionadas .blogs a{background-position: 0 -687px;}
+
+.imagemLegenda + .relacionadas{clear: both; padding-top: 10px;}
+
+.artigo img{float: left;}
+.artigo figure{float: left; margin-right: 10px;}
+
+.controles{margin-right: 20px;}
+.share{height: 50px;width: 100%;z-index: 10;position: absolute;}
+.share a{color:#FFF;}
+.share .compartilhe > a {background: url(../img/sprites/comentario.png) 0 -185px no-repeat; color: #FFF !important;text-shadow: 0 0 1px #000;}
+.share .comentario a, .destaques_ms .comentario a{padding: 6px 8px 2px 21px;background: url(../img/sprites/comentario.png) 0 -115px no-repeat;font: 9px Arial;text-transform: uppercase; color: #FFF !important; text-shadow: 0 0 1px #000;}
+
+.imagensdodia{background: rgb(230,231,232); padding: 0 30px; margin: 0 0 30px; clear: both;float: none; width: 970px; overflow: hidden;}
+.imagensdodia header.arrow{background: rgb(230,231,232);}
+.imagensdodia .nivoSlider{overflow: visible;width:100%;min-height: auto;}
+.imagensdodia .nivo-directionNav a{width:27px;height:40px;display: block; background: url(../img/ico/arrow-nav.png) 0 0 no-repeat; text-indent: -999px; }
+.imagensdodia .nivo-directionNav a:hover{text-decoration: none;}
+.imagensdodia .nivo-prevNav{left: 0;background-position: 20px -46px;margin-left: -20px;}
+.imagensdodia .nivo-directionNav .nivo-prevNav{ background: url(../img/ico/arrow-nav.png) 0 -56px no-repeat; margin-left: -27px; }
+.imagensdodia .nivo-caption{width: 100%;background: rgb(230,231,232);font:16px/18px arial; color: rgb(65, 64, 66);opacity: 1; padding: 10px 10px 0 0; position: relative; overflow: visible;}
+.imagensdodia .nivo-caption a{color: inherit;}
+.imagensdodia .nivo-caption strong{font:16px/18px "Arial black", arial; color: inherit; }
+.imagensdodia .nivo-caption p{padding: 0}
+.imagensdodia .nivo-control{text-indent: -999px;overflow: hidden; -moz-border-radius: 50%; border-radius: 50%; border: 1px solid #000;width: 7px; height: 7px; background: #000; display: inline-block; margin: 0 1px; }
+.imagensdodia .nivo-control.active{background: #FFF;}
+.imagensdodia .nivo-nextNav{right: -31px;}
+.imagensdodia .nivo-caption .share{right: -22px;top: -520px;overflow: visible;}
+.imagensdodia .midiassociais ul li{position: relative;}
+.imagensdodia .midiassociais ul li p{position: absolute; bottom: -13px;}
+.imagensdodia .share .compartilhe > a{padding-right: 5px;}
+.imagensdodia .nivo-caption .share .compartilhe > a.compartilhar_link.ativo{background: rgb(230,231,232) url(../img/sprites/noticia.gif) 2px -65px no-repeat; color: #4d4d4f !important; text-shadow: none;}
+
+
+.half{width: 300px; float: left; border-top: 1px solid rgb(188,190,192); overflow: hidden;}
+.half + .half{float: right;}
+.half .chapeu{display: block; padding: 5px 0;}
+.half .chapeu a{top: 0;}
+.half .titulo{font-size: 15px; line-height: 18px; padding: 10px 0; clear: both;}
+.half p{font-size: 13px; line-height: 15px;}
+
+/* Economia */
+.children .artigo + .artigo{margin-left: 40px; position: relative; overflow: visible;}
+.children .artigo + .artigo:before{top: 0px; left: -14px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(8, 40, 5, 0); border-top-color: #808285; border-width: 7px; margin-left: -7px;}
+.children .artigo + .artigo .titulo{position: relative;top: -9px; font-family: "EstLineMedium"; letter-spacing: -1px;}
+.children .chapeu a{color: #FFF; background: rgb(52, 91, 136); padding: 3px 5px; position: relative;margin: 2px 0 0; top: 3px; font:bold 10px/12px arial;}
+.children .chapeu a:after{left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(52, 91, 136, 0); border-left-color: #345b88; border-width: 9px; margin-top: -9px;}
+
+.indiceseconomia{background: #e7e7e8;}
+.indiceseconomia .indices > li{float: left;width: 19.5%; padding: 10px 0 2px; border-left: 1px dotted #000; position: relative; margin-bottom: 9px; min-height: 46px;}
+.indiceseconomia .indices > li:first-child{border: none;}
+.indiceseconomia .bolsa{float: left; font:bold 14px/15px arial; color: rgb(65, 64, 66);position: relative;z-index: 2;}
+.indiceseconomia .pos{color: rgb(37, 89, 49);}
+.indiceseconomia .neg{color: #F00;}
+.indiceseconomia img.fl{margin: 2px 2px 0 4px;}
+.graph{position: absolute; top: 7px;right: 0; z-index: 1;}
+.outrasbolsas{margin: -5px 0; position: relative;}
+.outrasbolsas li{font:bold 10px/14px arial; color: rgb(128,130,133); padding: 0 0 0 5px; text-transform: uppercase;}
+.outrasbolsas li .valor{float: right;}
+.outrasbolsas .neg{color: rgb(181,25,30);}
+
+.widgets ul.destaques{margin: 0 0 30px;padding-top: 5px}
+
+.destaques{background: rgb(209,211,212);}
+.destaques li{width: 24%; float: left; border-left: 1px dotted #000; padding: 0 0 0 5px; overflow: hidden; margin: 5px 0; min-height: 80px;}
+.destaques li:first-child{border: none;}
+.destaques li img + .texto, .destaques li img + .autor + br + .texto{font:bold 13px/15px arial; color: rgb(77, 77, 79); letter-spacing: -1px;}
+.destaques li img{margin: 0 5px 0 0; float: left;}
+.destaques .autor, .destaques .mascara{font: 12px/12px "EstLineBold", "times"; color: rgb(52, 91, 136); text-transform: uppercase; display: inline;padding-bottom: 5px;}
+.destaques li blockquote{background: url(../img/ico/quotes-lit.png) 0 0 no-repeat; padding-left: 28px; font:13px/14px "EstLineBold", "Times"; color: rgb(109, 110, 113); min-height: 24px;}
+.fraseautor{font:10px/13px "EstLineBold", "Times"; color: rgb(77, 77, 79);padding: 5px 0 10px 31px; text-transform: uppercase;}
+.destaques li .texto{font:15px/17px "EstLineBold", "Times"; color: rgb(109, 110, 113);}
+.destaques .fr{width: 35%;}
+
+.analistas{margin-top: 10px;margin-bottom: 30px;}
+.analistas figure{position: relative;}
+.analistas figure:before{width: 100%;height: 97%;background: rgba(52, 91, 136,0.7); content: ""; position: absolute; top: 0;right: 0;z-index: 5;}
+.analistas li{float:left;width: 144px;}
+.analistas figure img {width: 145px;}
+.analistas ul li:nth-child(odd){border-right: 1px dotted #808285;margin-right: 5px;padding-right: 5px;}
+.analistas ul li:nth-child(even){border-left: 1px dotted #808285;margin-left: -6px;padding-left: 5px;}
+.analistas li:first-child{margin-top: 0;}
+.analistas a{color: rgb(109, 110, 113);}
+.analistas .autor{font:10px/13px "EstLineBold", "Times"; text-transform: uppercase; color: rgb(77, 77, 79);}
+.analistas .linhafina{font:12px/18px "EstLineMedium", "Times";color: rgb(77, 77, 79); }
+.analistas .titulo{font:18px/20px "EstLineBold", "Times"; color: rgb(109, 110, 113); padding-bottom: 3px;}
+.analistas .titulo strong{color: rgb(52, 91, 136);}
+
+
+.especiais {margin-top: 20px;}
+.especiais li{border-top: 1px dotted rgb(128,130,133); overflow: hidden; margin: 10px 0; padding-top: 10px;}
+.especiais li:first-child{border: none; margin-top: 0; padding-top: 0;}
+.especiais li figure{width: 143px;float: left; margin-right: 10px; position: relative; height: 80px;}
+.especiais li figure img{left: -50%; top: -70%; position: relative;}
+.especiais a{color: rgb(77,77,79);}
+.especiais p{font:bold 12px/15px arial; color: rgb(77,77,79);}
+.especiais .chapeu{color: rgb(0,159,218);font-size: 10px; line-height: 15px; text-transform: uppercase;}
+
+.informe{background: rgb(241,241,242); margin: 0 0 30px;}
+.informe header{font:30px/35px "EstLineMedium", "Times";color: #000; padding: 10px;}
+.informe header strong{color: rgba(109,110,111,0.6); font-family: "EstLineBold", "Times";}
+.informe figure{position: relative;}
+.informe figure .titulo{position: absolute; top: 0; left: 0; width: 100%; background: rgba(230,231,232,0.5);font:60px/82px "EstLineBold", "Times"; color: #FFF; padding: 0 5px; height: 82px; z-index: 5;}
+.informe figure img{margin-bottom: -3px; width: 100%;}
+
+.galeriafotos li{float: left; display: inline-block; margin: 0 0 -3px 0;padding: 0;}
+.galeriafotos figure{position: relative;}
+.galeriafotos .over{position: absolute; top: 0;left: 0; font: 12px/14px arial; color: #FFF;background: rgba(0,0,0,0.4); padding: 5px; opacity: 0; width: 140px; height: 74px;
+	-webkit-transition:opacity 1s; -moz-transition:opacity 1s; transition:opacity 1s;}
+.galeriafotos figure:hover .over{opacity: 1}
+
+.galeria ul{overflow: hidden;}
+.widgets .galeria li{width: 50%;float: left; position: relative;margin-bottom: -3px;}
+.widgets .galeria li img{width: 100%;position: relative;z-index: 1;}
+/*.galeria li figcaption{width: 100%;}*/
+
+.slider-subhome{position: relative;}
+.slider-subhome a img{position: relative;}
+.slider-subhome .nivo-caption{padding:10px 10px 30px; position: relative; overflow: visible; opacity: 1; display: block; }
+.slider-subhome .nivo-caption strong{font:60px/35px "EstLineBold", "Times"; color: rgb(0,159,218);}
+.slider-subhome .nivo-caption .titulo{font:30px/35px "EstLineBold", "Times"; color: #FFF;}
+.slider-subhome .nivo-caption p{font:16px/20px arial; color: #FFF;}
+.slider-subhome .nivo-caption p a{color: #FFF;}
+.slider-subhome .nivo-caption em{font-style: italic; font-size: 12px; line-height: 12px;}
+.slider-subhome .nivo-controlNav {text-align: center; padding: 0; top: -40px; position: relative; z-index: 9; }
+.slider-subhome .nivo-controlNav > a{border: 1px solid rgb(0,146,200);text-indent: -3999px;overflow: hidden;-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 5px;height: 5px; background: rgb(0,146,200); display: inline-block; margin:0 2px;}
+.slider-subhome .nivo-controlNav > a.active{ background: #FFF;}
+.slider-subhome .nivo-directionNav{display: none;}
+.slider-subhome .nivo-caption .share{right: 0px;top: -353px;overflow: visible;}
+.slider-subhome .midiassociais ul li{position: relative;}
+.slider-subhome .midiassociais ul li p{position: absolute; bottom: -17px; color: #4d4d4f }
+.slider-subhome .share .compartilhe > a{padding-right: 3px;}
+.slider-subhome .nivo-caption .share .compartilhe > a.compartilhar_link.ativo{background: rgb(230,231,232) url(../img/sprites/noticia.gif) 2px -65px no-repeat; color: #4d4d4f !important; text-shadow: none;}
+
+.slider-subhome .nivoSlider  {min-height: 520px;}
+
+.artigo .imagemLegenda{float: none; margin-right: 0;}
+.artigo .imagemLegenda.imgGrande{margin-top: 5px}
+.imagemLegenda figcaption{float: right; font:bold 12px/15px arial; color: rgb(65, 64, 66); width: 48px; margin-top: -3px; position: relative; background: none; text-transform: none; padding: 0; width: 55px;}
+.imagemLegenda a{display: block;position: relative;float: left;}
+.imagemLegenda a.expandir{background: url(../img/ico/showimg.png) 0 0 no-repeat; content: ""; width: 38px;height: 38px; right: 10px; top: 5px; display: block; position: absolute; z-index: 8;}
+
+.comentario a{display: inline !important; position: relative; top: 1px;}
+.compartilhar{margin-top: -15px;display: block !important;margin-left: 51px;}
+
+/* slim */
+.top5{padding-bottom: 30px;}
+.top5 header.arrow{width: 100%;margin-bottom: 0px;}
+.top5 li{float: left; width: 119px; padding: 0 1px; background: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.top5 li img{width: 100%; float: none;}
+.top5 li .legenda{min-width: 123px;position: absolute;top: auto !important;z-index: 10;padding: 5px; font:13px/15px arial; color: #FFF; overflow: hidden; clear: both; background: gray; margin: -3px 0 0 0; bottom: 0;}
+.top5 li .legenda strong{font-family: "Arial Black"; display: block; clear: both;padding-bottom: 5px;}
+.top5 .item1 .legenda{background-color: rgba(201,92,26,0.7);}
+.top5 .item2 .legenda{background-color: rgba(120,129,48,0.7);}
+.top5 .item3 .legenda{background-color: rgba(220,69,91,0.7);}
+.top5 .item4 .legenda{background-color: rgba(106,83,136,0.7);}
+.top5 .item5 .legenda{background-color: rgba(0,159,218,0.7);}
+
+.artigosslim article{overflow: hidden;}
+.artigosslim article header{width:100%;}
+.artigosslim .titulo a{color:rgb(77,77,79);}
+.artigosslim .imagemLegenda a{float:left;}
+.artigosslim .imagemLegenda figcaption{float:left;width:210px;margin: 10px 0}
+.compartilharslim{margin-top:-23px;width:100%;height:20px;float:left; background: rgba(77,77,79,0.6); position: relative; z-index: 10;}
+.compartilharslim .compartilhar{margin-top: 0;}
+.compartilharslim ul{float:right;}
+.compartilharslim a{color: #FFF;}
+.imagemLegenda .compartilharslim a:hover:after{display: none;}
+.compartilharslim .comentario a{background: url(../img/sprites/comentario.png) 0 -120px no-repeat;font:10px arial; padding-left: 20px; margin-top: 3px;}
+.compartilharslim .compartilhe a{background: url(../img/sprites/comentario.png) 0 -185px no-repeat; padding-right: 5px;}
+.artigosslim .titulo{font:60px/60px "EstLineMedium", Times; width: 60%; text-transform: uppercase;}
+.artigosslim .chapeu{font:30px/32px "EstLineMedium", Times; color: rgb(109, 111, 114); margin: 5px 0;}
+.artigosslim p{font:15px/24px Georgia, Times; color: rgb(65, 64, 66); padding-bottom: 15px;}
+.artigosslim p a{color: rgb(0, 143, 212); }
+.artigosslim article{border-bottom: 1px dotted #000; margin-bottom: 5px;}
+
+/* galerias */
+.galeriapg .comentarios{width: 100%;}
+.galeriapg .galeriaThumb{margin-bottom: 30px;}
+.galeriapg #abreComentario{display: none;}
+.galeriapg .opnioes{height: 500px !important;}
+.galeriapg .cabecalho .titulo{font:bold 35px "EstLineBold", Times; color: rgb(25, 55, 89);}
+.galeriapg .cabecalho .share {margin: 10px 0 30px;}
+.galeriapg .cabecalho .share li{float: left; margin-right: 10px; border-left: 1px dotted #000; padding-left: 5px;}
+.galeriapg .cabecalho .share li:first-child{border-left: none; padding-left: 0;}
+.galeriapg .cabecalho .share li a{font: 10px arial; color: #000;}
+.galeriapg img{margin-bottom: -3px;}
+.galeriapg .rel {margin: 30px 0; overflow: hidden;}
+.galeriapg .rel ul{width: 104%;}
+.galeriapg .rel li{float: left; width: 198px; margin: 0 10px 25px 0; padding-right: 0; min-height: 185px;}
+.galeriapg .rel li figure, .galeriapg .rel li img{width: 100%;}
+.galeriapg .rel li a p, .galeriapg .rel li a {font: 14px/16px arial; color: rgb(77, 77, 79); padding: 0; }
+.galeriapg .rel li .share, .lastfigures li .share{position: absolute; top: 0;right: 0;width: 100%;background: rgba(0,0,0,0.5); z-index: 2; text-align: right;}
+.galeriapg .rel li .share li, .lastfigures li .share li{width: auto; margin:-2px 0 4px 0; padding-right: 5px;}
+.galeriapg .rel li .share a, .lastfigures li .share a, .lastfigures.destaque li .share a{color: #FFF; font:10px arial;}
+.galeriapg .rel .compartilhe{margin-left: 3px;}
+.galeriapg .rel .compartilhar{margin-top: 0;}
+.galeriapg .rel .comentario a, .lastfigures .comentario a{top: -2px; background: url(../img/sprites/comentario.png) 0 -120px no-repeat; padding: 0 0 0 20px;}
+.galeriapg .compartilhe a{background: url(../img/sprites/comentario.png) 2px -184px no-repeat;}
+.galeriapg .compartilhar_link{position: relative;top: -1px;}
+
+.midiassociais ul li{padding:7px !important;width:26px !important}
+.midiassociais ul li a{color: #4d4d4f !important}
+
+.lastfigures, .lastfigures+article{width: 580px}
+.lastfigures.destaque li a{color: rgb(77,77,79);}
+.lastfigures.destaque li img{width: 100%;}
+.lastfigures.destaque li{float: none; margin-bottom: 14px; width: 100%;}
+.lastfigures.destaque li .titulo{bottom: 0;position: absolute; background: rgba(0,0,0,0.7); z-index: 2; color: #FFF; width: 100%; padding: 10px;}
+.lastfigures li figure{display: block;}
+.lastfigures li figure a .titulo{color: rgb(77, 77, 79);}
+.lastfigures li figcaption{position: relative; z-index: 5;}
+.lastfigures li strong{color: rgb(0, 159, 218); display: block;clear: both; font: 25px/35px "EstLineBold", Times;}
+.lastfigures li {font:16px/18px arial}
+.lastfigures li:first-child + li{float: right;}
+.lastfigures li{float: left; width: 280px; position: relative;}
+.lastfigures li .share li{float: left;}
+.lastfigures li img{ width: 303px; max-width: 100%;}
+.lastfigures .share strong{float: left; font:bold 12px arial; color: #FFF;padding: 3px; text-transform: uppercase;}
+.lastfigures .share .compartilhar_link{top: 1px;}
+.lastfigures + .rel ul{width: 102%;}
+.lastfigures + .rel ul .share ul{width: auto;}
+.lastfigures + .rel ul li{margin: 0 11px 25px 0; width: 186px;}
+.lastfigures .comentario a{top: 0;}
+
+/* Aliás */
+.repercussao .titulo, .repercussao .titulo a{font:bold 20px/20px Arial; color: rgb(109, 111, 114); display: block; padding-bottom: 5px;margin: 20px 0 10px;}
+.repercussao li a{font:bold 13px/16px arial; color: rgb(109, 111, 114);}
+.repercussao li a strong{color:rgb(77,77,79);}
+.more{text-transform: uppercase; font:bold 10px/13px arial;color:rgb(77,77,79);}
+.programacaotv ul{background: #FFF;}
+.programacaotv li a{font:bold 13px/16px arial; color: rgb(109, 111, 114);}
+.programacaotv li a strong{color:rgb(77,77,79);}
+.frases blockquote{font:22px/26px "EstLineMedium", Times; color: rgb(128, 130, 133);}
+.frases blockquote:before{content: ""; width: 44px;height: 41px;display: block;float: left;background: url(../img/ico/quotes-big.png) 0 -7px no-repeat; margin: 6px 5px 0 0}
+.frases .autor{font:italic 16px/26px "EstLineItalic", Times;color: rgb(128, 130, 133); width: auto;}
+.frases li{border-top: 1px dotted #000; padding-top: 10px; margin-top: 10px;}
+.frases li:first-child{border: none; padding: 0; margin: 0;}
+
+/* Viagem */
+.mapscontainer{position: relative;}
+.mapscontainer .mapa{width: 87px; height: 87px; overflow: hidden; -webkit-border-radius: 50%;
+-moz-border-radius: 50%; border-radius: 50%; display: block; z-index: 2; position: relative; float: right; top: -5px; }
+.mapscontainer .pin {width: 33px;height: 48px;display: block;background: url(../img/ico/mapa.png) 0 0 no-repeat; position: absolute; top: -21px; right: 0; z-index: 5;}
+.mapscontainer .mapa iframe{position: relative;margin-left: -140px; position: relative; margin-top: -140px;}
+
+.vocesabia .titulo{font: bold 20px arial ; color: rgb(109, 111, 114);}
+.vocesabia img{border: 10px solid rgb(224,225,227); width: 100%; -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+.vocesabia li{font:bold 13px/16px arial; color: rgb(109, 111, 114);list-style: none;margin-bottom: 10px}
+.vocesabia li strong{color:rgb(84,64,119);}
+.vocesabia .more{font: bold 10px arial; text-transform: uppercase; color: rgb(0, 143, 212); border: 1px dotted #000; border-right: none;border-left: none; padding: 5px 0; display: block;}
+
+.maislidas li{font: 12px/14px arial;border-bottom: 1px dotted #000;}
+
+/* INICIO - Destaque Triplo */
+.destaques_ms {margin-bottom:15px;float:left; margin-right: 5px; min-height: 250px;}
+.destaques_ms .topo_artigo{width:300px; position: absolute; z-index: 9; background:rgba(0,0,0,0.5); height: 20px;}
+.destaques_ms .topo_artigo .cidade{color:#fff;font: bold 12px/20px arial;text-transform:uppercase;margin-left: 10px;float: left;}
+.destaques_ms .topo_artigo .socialcomp{color:#fff;font:10px/19px arial;}
+.destaques_ms .descricao{padding:0 10px;width: 300px;height:80px;background-color: #3c3c3e;margin-top: -4px;}
+.destaques_ms .descricao .titulo{font:25px/35px 'EstLineBold',arial;color:rgb(68,167,197);}
+.destaques_ms .descricao p{font:16px/18px arial;color:#fff}
+.destaques_ms .titulo strong{color:#fff;}
+.destaques_ms .compartilhe a { color:#fff;background: url(../img/sprites/comentario.png) 0 -185px no-repeat;float: left;}
+.destaques_ms .listacomentarios a {color:#fff;font:10px/22px arial;background: url(../img/sprites/noticia_branco.gif) 0 4px no-repeat;float: left;width: 30px;padding-left: 25px;}
+.destaques_ms .topo_artigo .controles{margin-right: 5px;}
+
+.pequeno_ms figure img{width: 300px;}
+.branca_ms figure img{display:none;}
+
+.grande_ms .topo_artigo{width:610px;}
+.grande_ms .descricao{width:610px;}
+.grande_ms .titulo strong{color:#fff;}
+
+.branca_ms .descricao{background-color:#fff;margin-top: 20px;padding:0;}
+.branca_ms .descricao p{color:rgb(109,111,114);}
+.branca_ms .descricao .titulo {font:35px/35px 'EstLineBold',arial;}
+.branca_ms .descricao .titulo strong{color:rgb(109,111,114);}
+.branca_ms .topo_artigo{background:rgba(68,167,196,0.5);}
+/* FIM - Destaque Triplo */
+
+/* Componentes Patrocinados */
+/* Esquerda */
+.patrocinado-left > i{color:#999;font:italic 9px/20px Arial}
+.patrocinado-left .chapeu > a{color:#00a9e0}
+.patrocinado-left header{border-top:1px solid #00a9e0}
+/* Meio e direita */
+.patrocinado-center,.patrocinado-right{border:1px solid #00a9e0;margin-bottom:30px}
+.patrocinado-center .chapeu > a,.patrocinado-right .chapeu > a{color:#fff;line-height:26px}
+.patrocinado-center header,.patrocinado-right header{background-color:#00a9e0;border-top:none;height:38px;padding-bottom:0;text-indent:10px}
+.patrocinado-center > .artigo .imagemLegenda.imgGrande,.patrocinado-right > .artigo .imagemLegenda.imgGrande{display:inline-block;margin-top:0;overflow:inherit;position:relative}
+.patrocinado-center figure.imgGrande img,.patrocinado-right figure.imgGrande img{float:left}
+.patrocinado-center .pat-cent-down .autor,.patrocinado-right .pat-cent-right .autor{color:#00a9e0;font:bold 12px/14px Arial;position:relative;text-transform:uppercase;top:6px}
+.patrocinado-center .pat-cent-down h2.titulo,.patrocinado-right .pat-cent-right h2.titulo{color:#006394 !important;font:bold 23px/23px Arial}
+/* Meio */
+.patrocinado-center > .artigo{padding-bottom:0}
+.patrocinado-center .share{z-index:10}
+.patrocinado-center .share .controles{background-color:#00a9e2;margin-top:147px;padding-left:0}
+.patrocinado-center .share .compartilhar{margin:0}
+.patrocinado-center .share .midiassociais{top:20px}
+.patrocinado-center .pat-cent-down{padding:10px}
+.patrocinado-center .pat-cent-down p{font:normal 16px/20px Arial}
+.patrocinado-center i,.patrocinado-right i{color:#999;font:italic 9px/11px Arial}
+/* Direita */
+.patrocinado-right > .artigo{padding:5px}
+.patrocinado-right > .artigo .imagemLegenda.imgGrande{height:50px;width:80px}
+.patrocinado-right .pat-cent-right{float:right;width:135px}
+.patrocinado-right .pat-cent-right .autor{font:bold 8px/10px Arial;padding-bottom:0;top:1px}
+.patrocinado-right .pat-cent-right h2.titulo{font:bold 11px/13px Arial;margin-top:5px;padding-bottom:0}
+.patrocinado-right i{clear:both;display:block;padding-top:5px}

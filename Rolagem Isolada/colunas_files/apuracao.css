@@ -1,0 +1,463 @@
+/* APURAÇÃO */
+.navegacao {margin-bottom: 30px; overflow: hidden;}
+.senador .navegacao,.presidente .navegacao,.governador .navegacao{overflow: visible;}
+
+.menu-apuracao{border: 1px solid #00a9df; border-left: none; border-right: none; padding: 5px 0; margin-bottom: 10px;}
+.menu-apuracao li{float: left; border-left: 1px solid #00a9df; padding: 0 10px;}
+.menu-apuracao li:first-child{border: none; padding-left: 0;}
+.menu-apuracao li a{font:bold 16px arial; text-transform: uppercase; color: #b7b5b7}
+.menu-apuracao li a.ativo{color: #4d4d4f}
+
+.submenu-apuracao{}
+.submenu-apuracao a{border: 1px solid #eaebec; display: inline-block; padding: 3px 5px; font:bold 14px arial; text-transform: uppercase; color: #b7b5b7; float: left; margin-right: 5px;}
+.submenu-apuracao a:hover{background: #4d4d4f;}
+.submenu-apuracao a.ativo{background: #00a9df; color: #FFF; border-color: #00a9df;}
+.submenu-apuracao li{font:14px arial; color: #b7b5b7; float: left; line-height: 26px; padding-left: 2px;}
+.submenu-apuracao li a{padding: 3px 2px; margin: 0;}
+
+.menu-senador {overflow: hidden;float: none;display: block;}
+.menu-senador li{float: left; border-left: 1px solid #00a9df; padding: 0 10px;}
+.menu-senador li:first-child{border: none; padding-left: 0;}
+.menu-senador li a{font:bold 16px arial; text-transform: uppercase; color: #b7b5b7}
+.menu-senador li a.ativo{color: #4d4d4f}
+
+.status-votacao{font:12px arial; color: #4d4d4f; width: 370px;}
+.status-votacao header{border-bottom: 1px solid #b7b5b7; margin-bottom: 5px; padding-bottom: 5px; overflow: hidden;}
+.status-votacao li{overflow: hidden; clear: both;}
+.status-votacao .local{font-weight: bold; font-size: 18px; text-transform: uppercase;}
+.status-votacao .numeros span{text-align: right; text-transform: uppercase; font: 10px arial; line-height: 14px; padding-right: 5px;}
+.status-votacao .numeros strong{font-size: 35px; line-height: 28px}
+
+.status-votacao .classificacao li:first-child{padding: 5px 0; margin: 0; border: none;}
+.status-votacao .classificacao li{margin-top: 3px; padding-top: 3px;margin-top: 3px;
+padding-top: 3px;
+border-bottom: 1px dotted #bfb4bf;}
+.status-votacao .classificacao figure{border: 3px solid gray; position: relative; width: 66px; height: 66px; float: left; margin: 0 5px 0 0 }
+.status-votacao .classificacao figure .posicao{position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.5); color: #FFF; z-index: 2; padding: 5px;}
+.status-votacao .classificacao li > .fl > .posicao{display: inline;}
+.status-votacao .classificacao img{position: relative; z-index: 1; width: 100%; transform: translateY(-20%);filter:progid:DXImageTransform.Microsoft.Matrix(Dy=-15)}
+.status-votacao .classificacao figure + strong{font-size: 15px;}
+.status-votacao .classificacao .grafico{width: 177px; height: 26px; padding: 1px; border: 1px solid #b7b5b7; clear: right; float: left; margin: 5px 0}
+.status-votacao .classificacao .fl{width: 250px;}
+.status-votacao .classificacao .fr strong{display: block; clear: both; text-align: right; font-size: 22px;}
+.status-votacao .classificacao .barra{background: gray; display: block; height: 22px;}
+.status-votacao .classificacao.presidente li:nth-child(2),.status-votacao .classificacao.governador li:nth-child(2),.status-votacao .classificacao.Senador li:nth-child(2),
+.status-votacao .classificacao.presidente li:nth-child(3),.status-votacao .classificacao.governador li:nth-child(3),.status-votacao .classificacao.Senador li:nth-child(3),
+.status-votacao .classificacao.presidente li:nth-child(4),.status-votacao .classificacao.governador li:nth-child(4),.status-votacao .classificacao.Senador li:nth-child(4){border: none; margin: 15px 0;}
+.status-votacao .classificacao.presidente li:nth-child(2) .fr,
+.status-votacao .classificacao.presidente li:nth-child(3) .fr,
+.status-votacao .classificacao.presidente li:nth-child(4) .fr{font-size: 15px;}
+.status-votacao .classificacao.presidente li:nth-child(2){margin-top: 0;}
+
+.outrosvotos{margin-top: 20px;}
+.outrosvotos .titulo .fl{font-size: 13px; text-transform: uppercase; color: #4d4d4f; font-weight: bold; line-height: 20px}
+.outrosvotos .titulo .fr{font-size: 17px; color: #b7b5b7; font-weight: bold;}
+.outrosvotos li{float: right; width: 50%; clear: none;}
+.outrosvotos li:first-child{float: left;}
+.outrosvotos .barra{border: 1px solid #b7b5b7; width: 175px; height: 26px; padding: 1px; line-height: 24px; overflow: hidden; color: #b7b5b7; font-weight: bold;}
+.outrosvotos .barra .marcador{height: 22px; background: #b7b5b7; float: left; margin-right: 5px;}
+.outrosvotos p{clear: both; float: none; text-align: right; padding-top: 10px; font-size: 11px;}
+
+.status-votacao .classificacao .cor_pt figure{border-color: #a00200}
+.status-votacao .classificacao .cor_psol figure{border-color: #b02b01}
+.status-votacao .classificacao .cor_pcdob figure{border-color: #b53901}
+.status-votacao .classificacao .cor_pps figure{border-color: #ba4601}
+.status-votacao .classificacao .cor_sdd figure{border-color: #bf5301}
+.status-votacao .classificacao .cor_psb figure{border-color: #cf7d03}
+.status-votacao .classificacao .cor_pmdb figure{border-color: #d48b03}
+.status-votacao .classificacao .cor_pros figure{border-color: #d99803}
+.status-votacao .classificacao .cor_prtb figure{border-color: #dea604}
+.status-votacao .classificacao .cor_ptb figure{border-color: #e4b304}
+.status-votacao .classificacao .cor_pmn figure{border-color: #e9c104}
+.status-votacao .classificacao .cor_pdt figure{border-color: #eece04}
+.status-votacao .classificacao .cor_ptdob figure{border-color: #f3dc05}
+.status-votacao .classificacao .cor_pr figure{border-color: #f4e509}
+.status-votacao .classificacao .cor_psl figure{border-color: #eae116}
+.status-votacao .classificacao .cor_phs figure{border-color: #d5d931}
+.status-votacao .classificacao .cor_prp figure{border-color: #cad63e}
+.status-votacao .classificacao .cor_psd figure{border-color: #b6ce58}
+.status-votacao .classificacao .cor_pen figure{border-color: #abc966}
+.status-votacao .classificacao .cor_psc figure{border-color: #abc966}
+.status-votacao .classificacao .cor_pv figure{border-color: #97c281}
+.status-votacao .classificacao .cor_pp figure{border-color: #8cbe8e}
+.status-votacao .classificacao .cor_ptc figure{border-color: #82ba9b}
+.status-votacao .classificacao .cor_dem figure{border-color: #6db3b6}
+.status-votacao .classificacao .cor_prb figure{border-color: #6297b9}
+.status-votacao .classificacao .cor_psdb figure{border-color: #5d83bb}
+.status-votacao .classificacao .cor_psdc figure{border-color: #5155df}
+
+.status-votacao .classificacao .cor_pt .fr strong,
+.status-votacao .classificacao .cor_psol .fr strong,
+.status-votacao .classificacao .cor_pcdob .fr strong,
+.status-votacao .classificacao .cor_pps .fr strong,
+.status-votacao .classificacao .cor_sdd .fr strong,
+.status-votacao .classificacao .cor_psb .fr strong,
+.status-votacao .classificacao .cor_pmdb .fr strong,
+.status-votacao .classificacao .cor_pros .fr strong,
+.status-votacao .classificacao .cor_prtb .fr strong,
+.status-votacao .classificacao .cor_ptb .fr strong,
+.status-votacao .classificacao .cor_pmn .fr strong,
+.status-votacao .classificacao .cor_pdt .fr strong,
+.status-votacao .classificacao .cor_ptdob .fr strong,
+.status-votacao .classificacao .cor_pr .fr strong,
+.status-votacao .classificacao .cor_psl .fr strong,
+.status-votacao .classificacao .cor_phs .fr strong,
+.status-votacao .classificacao .cor_prp .fr strong,
+.status-votacao .classificacao .cor_psd .fr strong,
+.status-votacao .classificacao .cor_pen .fr strong,
+.status-votacao .classificacao .cor_psc .fr strong,
+.status-votacao .classificacao .cor_pv .fr strong,
+.status-votacao .classificacao .cor_pp .fr strong,
+.status-votacao .classificacao .cor_ptc .fr strong,
+.status-votacao .classificacao .cor_dem .fr strong,
+.status-votacao .classificacao .cor_prb .fr strong,
+.status-votacao .classificacao .cor_psdb .fr strong,
+.status-votacao .classificacao .cor_psdc .fr strong,
+
+.status-votacao .classificacao .cor_pt .votos strong{color: #a00200}
+.status-votacao .classificacao .cor_psol .votos strong{color: #b02b01}
+.status-votacao .classificacao .cor_pcdob .votos strong{color: #b53901}
+.status-votacao .classificacao .cor_pps .votos strong{color: #ba4601}
+.status-votacao .classificacao .cor_sdd .votos strong{color: #bf5301}
+.status-votacao .classificacao .cor_psb .votos strong{color: #cf7d03}
+.status-votacao .classificacao .cor_pmdb .votos strong{color: #d48b03}
+.status-votacao .classificacao .cor_pros .votos strong{color: #d99803}
+.status-votacao .classificacao .cor_prtb .votos strong{color: #dea604}
+.status-votacao .classificacao .cor_ptb .votos strong{color: #e4b304}
+.status-votacao .classificacao .cor_pmn .votos strong{color: #e9c104}
+.status-votacao .classificacao .cor_pdt .votos strong{color: #eece04}
+.status-votacao .classificacao .cor_ptdob .votos strong{color: #f3dc05}
+.status-votacao .classificacao .cor_pr .votos strong{color: #f4e509}
+.status-votacao .classificacao .cor_psl .votos strong{color: #eae116}
+.status-votacao .classificacao .cor_phs .votos strong{color: #d5d931}
+.status-votacao .classificacao .cor_prp .votos strong{color: #cad63e}
+.status-votacao .classificacao .cor_psd .votos strong{color: #b6ce58}
+.status-votacao .classificacao .cor_pen .votos strong{color: #abc966}
+.status-votacao .classificacao .cor_psc .votos strong{color: #abc966}
+.status-votacao .classificacao .cor_pv .votos strong{color: #97c281}
+.status-votacao .classificacao .cor_pp .votos strong{color: #8cbe8e}
+.status-votacao .classificacao .cor_ptc .votos strong{color: #82ba9b}
+.status-votacao .classificacao .cor_dem .votos strong{color: #6db3b6}
+.status-votacao .classificacao .cor_prb .votos strong{color: #6297b9}
+.status-votacao .classificacao .cor_psdb .votos strong{color: #5d83bb}
+.status-votacao .classificacao .cor_psdc .votos strong{color: #5155df}
+
+.status-votacao .classificacao .cor_pt .barra{background: #a00200}
+.status-votacao .classificacao .cor_psol .barra{background: #b02b01}
+.status-votacao .classificacao .cor_pcdob .barra{background: #b53901}
+.status-votacao .classificacao .cor_pps .barra{background: #ba4601}
+.status-votacao .classificacao .cor_sdd .barra{background: #bf5301}
+.status-votacao .classificacao .cor_psb .barra{background: #cf7d03}
+.status-votacao .classificacao .cor_pmdb .barra{background: #d48b03}
+.status-votacao .classificacao .cor_pros .barra{background: #d99803}
+.status-votacao .classificacao .cor_prtb .barra{background: #dea604}
+.status-votacao .classificacao .cor_ptb .barra{background: #e4b304}
+.status-votacao .classificacao .cor_pmn .barra{background: #e9c104}
+.status-votacao .classificacao .cor_pdt .barra{background: #eece04}
+.status-votacao .classificacao .cor_ptdob .barra{background: #f3dc05}
+.status-votacao .classificacao .cor_pr .barra{background: #f4e509}
+.status-votacao .classificacao .cor_psl .barra{background: #eae116}
+.status-votacao .classificacao .cor_phs .barra{background: #d5d931}
+.status-votacao .classificacao .cor_prp .barra{background: #cad63e}
+.status-votacao .classificacao .cor_psd .barra{background: #b6ce58}
+.status-votacao .classificacao .cor_pen .barra{background: #abc966}
+.status-votacao .classificacao .cor_psc .barra{background: #abc966}
+.status-votacao .classificacao .cor_pv .barra{background: #97c281}
+.status-votacao .classificacao .cor_pp .barra{background: #8cbe8e}
+.status-votacao .classificacao .cor_ptc .barra{background: #82ba9b}
+.status-votacao .classificacao .cor_dem .barra{background: #6db3b6}
+.status-votacao .classificacao .cor_prb .barra{background: #6297b9}
+.status-votacao .classificacao .cor_psdb .barra{background: #5d83bb}
+.status-votacao .classificacao .cor_psdc .barra{background: #5155df}
+
+/************** APAGAR *****************/
+.status-votacao .classificacao .vermelho figure{border-color: #c1272d; }
+.status-votacao .classificacao .vermelho .fr strong,
+.status-votacao .classificacao .vermelho .votos strong{color: #c1272d}
+.status-votacao .classificacao .vermelho .barra{background: #c1272d;}
+
+.status-votacao .classificacao .azul figure{border-color: #1974bf; }
+.status-votacao .classificacao .azul .fr strong,
+.status-votacao .classificacao .azul .votos strong{color: #1974bf}
+.status-votacao .classificacao .azul .barra{background: #1974bf;}
+
+.status-votacao .classificacao .amarelo figure{border-color: #ffb41f; }
+.status-votacao .classificacao .amarelo .fr strong,
+.status-votacao .classificacao .amarelo .votos strong{color: #ffb41f}
+.status-votacao .classificacao .amarelo .barra{background: #ffb41f;}
+
+.status-votacao .classificacao .cor_pana figure{border-color: #a00200}
+.status-votacao .classificacao .cor_pfon figure{border-color: #b02b01}
+.status-votacao .classificacao .cor_pdef figure{border-color: #b53901}
+.status-votacao .classificacao .cor_plan figure{border-color: #ba4601}
+.status-votacao .classificacao .cor_pbar figure{border-color: #bf5301}
+.status-votacao .classificacao .cor_pfra figure{border-color: #cf7d03}
+.status-votacao .classificacao .cor_pess figure{border-color: #d48b03}
+.status-votacao .classificacao .cor_pame figure{border-color: #d99803}
+.status-votacao .classificacao .cor_pgur figure{border-color: #dea604}
+.status-votacao .classificacao .cor_pcax figure{border-color: #e4b304}
+.status-votacao .classificacao .cor_pcai figure{border-color: #e9c104}
+.status-votacao .classificacao .cor_pita figure{border-color: #eece04}
+.status-votacao .classificacao .cor_peve figure{border-color: #97c281}
+.status-votacao .classificacao .cor_palu figure{border-color: #8cbe8e}
+.status-votacao .classificacao .cor_pjag figure{border-color: #82ba9b}
+.status-votacao .classificacao .cor_panz figure{border-color: #6db3b6}
+.status-votacao .classificacao .cor_pcar figure{border-color: #6297b9}
+.status-votacao .classificacao .cor_pban figure{border-color: #5d83bb}
+.status-votacao .classificacao .cor_pkuw figure{border-color: #abc966}
+.status-votacao .classificacao .cor_pjeq figure{border-color: #abc966}
+.status-votacao .classificacao .cor_pcen figure{border-color: #97c281}
+  
+.status-votacao .classificacao .cor_pana .fr strong,
+.status-votacao .classificacao .cor_pfon .fr strong,
+.status-votacao .classificacao .cor_pdef .fr strong,
+.status-votacao .classificacao .cor_plan .fr strong,
+.status-votacao .classificacao .cor_pbar .fr strong,
+.status-votacao .classificacao .cor_pfra .fr strong,
+.status-votacao .classificacao .cor_pess .fr strong,
+.status-votacao .classificacao .cor_pame .fr strong,
+.status-votacao .classificacao .cor_pgur .fr strong,
+.status-votacao .classificacao .cor_pcax .fr strong,
+.status-votacao .classificacao .cor_pcai .fr strong,
+.status-votacao .classificacao .cor_pita .fr strong,
+.status-votacao .classificacao .cor_peve .fr strong,
+.status-votacao .classificacao .cor_palu .fr strong,
+.status-votacao .classificacao .cor_pjag .fr strong,
+.status-votacao .classificacao .cor_panz .fr strong,
+.status-votacao .classificacao .cor_pcar .fr strong,
+.status-votacao .classificacao .cor_pban .fr strong,
+.status-votacao .classificacao .cor_pkuw .fr strong,
+.status-votacao .classificacao .cor_pjeq .fr strong,
+.status-votacao .classificacao .cor_pcen .fr strong,
+  
+.status-votacao .classificacao .cor_pana .votos strong{color: #a00200}
+.status-votacao .classificacao .cor_pfon .votos strong{color: #b02b01}
+.status-votacao .classificacao .cor_pdef .votos strong{color: #b53901}
+.status-votacao .classificacao .cor_plan .votos strong{color: #ba4601}
+.status-votacao .classificacao .cor_pbar .votos strong{color: #bf5301}
+.status-votacao .classificacao .cor_pfra .votos strong{color: #cf7d03}
+.status-votacao .classificacao .cor_pess .votos strong{color: #d48b03}
+.status-votacao .classificacao .cor_pame .votos strong{color: #d99803}
+.status-votacao .classificacao .cor_pgur .votos strong{color: #dea604}
+.status-votacao .classificacao .cor_pcax .votos strong{color: #e4b304}
+.status-votacao .classificacao .cor_pcai .votos strong{color: #e9c104}
+.status-votacao .classificacao .cor_pita .votos strong{color: #eece04}
+.status-votacao .classificacao .cor_peve .votos strong{color: #97c281}
+.status-votacao .classificacao .cor_palu .votos strong{color: #8cbe8e}
+.status-votacao .classificacao .cor_pjag .votos strong{color: #82ba9b}
+.status-votacao .classificacao .cor_panz .votos strong{color: #6db3b6}
+.status-votacao .classificacao .cor_pcar .votos strong{color: #6297b9}
+.status-votacao .classificacao .cor_pban .votos strong{color: #5d83bb}
+.status-votacao .classificacao .cor_pkuw .votos strong{color: #abc966}
+.status-votacao .classificacao .cor_pjeq .votos strong{color: #abc966}
+.status-votacao .classificacao .cor_pcen .votos strong{color: #97c281}
+  
+.status-votacao .classificacao .cor_pana .barra{background: #a00200}
+.status-votacao .classificacao .cor_pfon .barra{background: #b02b01}
+.status-votacao .classificacao .cor_pdef .barra{background: #b53901}
+.status-votacao .classificacao .cor_plan .barra{background: #ba4601}
+.status-votacao .classificacao .cor_pbar .barra{background: #bf5301}
+.status-votacao .classificacao .cor_pfra .barra{background: #cf7d03}
+.status-votacao .classificacao .cor_pess .barra{background: #d48b03}
+.status-votacao .classificacao .cor_pame .barra{background: #d99803}
+.status-votacao .classificacao .cor_pgur .barra{background: #dea604}
+.status-votacao .classificacao .cor_pcax .barra{background: #e4b304}
+.status-votacao .classificacao .cor_pcai .barra{background: #e9c104}
+.status-votacao .classificacao .cor_pita .barra{background: #eece04}
+.status-votacao .classificacao .cor_peve .barra{background: #97c281}
+.status-votacao .classificacao .cor_palu .barra{background: #8cbe8e}
+.status-votacao .classificacao .cor_pjag .barra{background: #82ba9b}
+.status-votacao .classificacao .cor_panz .barra{background: #6db3b6}
+.status-votacao .classificacao .cor_pcar .barra{background: #6297b9}
+.status-votacao .classificacao .cor_pban .barra{background: #5d83bb}
+.status-votacao .classificacao .cor_pkuw .barra{background: #abc966}
+.status-votacao .classificacao .cor_pjeq .barra{background: #abc966}
+.status-votacao .classificacao .cor_pcen .barra{background: #97c281}
+/************** APAGAR *****************/
+
+/*
+.infografico{clear: both; float: left; margin-top: 15px; margin-bottom: 15px;}
+.infografico .titulo{overflow: hidden; padding-bottom: 3px; margin-bottom: 10px;}
+.infografico .titulo h2{font:bold 18px arial; text-transform: uppercase; color: #4d4d4f; float: left;}*/
+
+.tabelaTodos{overflow: hidden;clear: both; float: none; margin-top: 15px; margin-bottom: 15px;}
+.tabelaTodos header{overflow: hidden;border-bottom: 1px solid #b7b5b7;margin-bottom: 10px;}
+.tabelaTodos header h2{font:bold 18px arial; text-transform: uppercase; color: #4d4d4f;}
+.tabelaTodos .legenda{font:12px arial; text-transform: uppercase; color: #6d6e70; overflow: hidden; float: left; clear: left; line-height: 33px;}
+.tabelaTodos .legenda li{float: left;}
+
+.tabelaTodos .matEleito,
+.tabelaTodos .matSegundo,
+.tabelaTodos .eleito,
+.tabelaTodos .segundo{position: relative; }
+
+.tabelaTodos .legenda .matEleito,
+.tabelaTodos .legenda .matSegundo,
+.tabelaTodos .legenda .eleito,
+.tabelaTodos .legenda .segundo{position: relative; margin:0 10px 0 15px}
+
+.tabelaTodos .legenda .matEleito:before,
+.tabelaTodos .legenda .matSegundo:before,
+.tabelaTodos .legenda .eleito:before,
+.tabelaTodos .legenda .segundo:before{top: 11px;}
+
+.tabelaTodos .matEleito:before, 
+.tabelaTodos .matSegundo:before, 
+.tabelaTodos .eleito:before, 
+.tabelaTodos .segundo:before{content:""; position: absolute; width: 10px; height: 10px; left: -15px; top: 2px;}
+
+.tabelaTodos .matEleito:before{background-color: #abdd90;}
+.tabelaTodos .matSegundo:before{background-color: #7fb5e5;}
+.tabelaTodos .eleito:before{background-color: #29700b;}
+.tabelaTodos .segundo:before{background-color: #07386d;}
+
+.tabelaTodos .filtro input{background: #eaebec; border: none; padding: 5px; }
+.tabelaTodos .filtro button{background: #00a9df; color: #FFF; padding: 5px; border: none; font-weight: bold;} 
+
+.tabelaTodos .cabecalho li{float: left; font:bold 15px arial; text-transform: uppercase; color: #00a9df;padding-bottom: 5px; }
+.tabelaTodos .listadecandidatos li{font:12px arial;  color: #6d6e70; float: left; border-bottom: 1px dotted #00a9df; padding-bottom: 10px; margin-top: 10px;}
+.tabelaTodos .lugar{width: 71px}
+.tabelaTodos .cand{width: 497px}
+.tabelaTodos .partido{width: 100px; }
+.tabelaTodos .numero{width:100px ; }
+.tabelaTodos .votos{width: 100px; }
+.tabelaTodos .porcento{width: 90px; }
+
+.outrasnoticias .col1-3{width: 323px; float: left;}
+
+/* HOME */
+.apuracaoHome.status-votacao{width: 100%; height: 420px; border-right: 1px solid #b7b5b7; padding-right: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.apuracaoHome.status-votacao header{border-bottom: none;}
+.apuracaoHome.status-votacao .local{font-size: 15px;color: #000}
+.apuracaoHome.status-votacao .numeros strong{font-size: 25px; color: #000}
+.apuracaoHome.status-votacao .numeros span{font-size: 9.5px; padding-top: 2px; line-height: 13px;}
+.apuracaoHome.status-votacao .classificacao .fl{width: 212px;}
+.apuracaoHome.status-votacao .classificacao figure + strong{font-size: 12px;}
+.apuracaoHome.status-votacao .classificacao .grafico{width: 128px;}
+.apuracaoHome.status-votacao .classificacao .barra{background-color: #006393;}
+.apuracaoHome.status-votacao .classificacao .fr strong{color: #006393}
+.apuracaoHome.status-votacao .classificacao li{border-top: none; position: relative; }
+.apuracaoHome.status-votacao .classificacao li .fl, 
+.apuracaoHome.status-votacao .classificacao li .fr{display: inline-block; background: #FFF; position: relative; z-index: 2; font-size: 10px}
+.apuracaoHome.status-votacao .classificacao li:nth-child(5) .fl,
+.apuracaoHome.status-votacao .classificacao li:nth-child(6) .fl,
+.apuracaoHome.status-votacao .classificacao li:nth-child(7) .fl{width: auto; text-transform: uppercase; padding-right: 5px;margin-right: 0 !important;}
+.apuracaoHome.status-votacao .classificacao li:nth-child(5) .fr,
+.apuracaoHome.status-votacao .classificacao li:nth-child(6) .fr,
+.apuracaoHome.status-votacao .classificacao li:nth-child(7) .fr{padding-left: 5px;}
+.apuracaoHome.status-votacao .classificacao li:nth-child(5):after,
+.apuracaoHome.status-votacao .classificacao li:nth-child(6):after,
+.apuracaoHome.status-votacao .classificacao li:nth-child(7):after{content: ""; position: absolute; bottom: 3px; width: 100%; height: 0; border-bottom: 2px dotted #4d4d4f; left: 0;}
+.apuracaoHome.status-votacao footer{padding-top: 25px;font-size: 11px;color: #6d6e70}
+
+.col8 + .col4 .apuracaoHome.status-votacao{border: none; padding: 0;}
+
+.apuracao-mapa.status-votacao{width: 100%;}
+.apuracao-mapa.status-votacao header{border-bottom: none;}
+.apuracao-mapa.status-votacao aside.fl{width: 200px;}
+.apuracao-mapa.status-votacao .classificacao li .fl{width: auto; background-color: #FFF;z-index: 2;display: block;text-transform: uppercase;padding-right: 5px;position: relative; font-size: 10px}
+.apuracao-mapa.status-votacao .classificacao li:nth-child(2) .fl,
+.apuracao-mapa.status-votacao .classificacao li:nth-child(3) .fl,
+.apuracao-mapa.status-votacao .classificacao li:nth-child(4) .fl{width: 160px;}
+.apuracao-mapa.status-votacao .local{font: bold 16px arial; color: #000}
+.apuracao-mapa.status-votacao .numeros strong{color: #000;font: bold 34px/30px arial}
+.apuracao-mapa.status-votacao .votos strong{font-size: 22px; display: block;}
+.apuracao-mapa.status-votacao .classificacao figure{width: 66px;height: 66px;margin-top: 15px}
+.apuracao-mapa.status-votacao .votos + p{padding-top: 0px;width: 127px;display: inline-block;float: right;padding-top: 0;}
+.apuracao-mapa.status-votacao .classificacao figure + strong{color: inherit;}
+.apuracao-mapa.status-votacao .outros li{padding-bottom: 10px;}
+.apuracao-mapa.status-votacao .outros .fl{font-size: 15px; font-weight: bold; text-transform: uppercase; color: #4d4d4f}
+.apuracao-mapa.status-votacao .outros .fr{color: #6d6e70; font-size: 12px; width: 125px}
+.apuracao-mapa.status-votacao .outros .fr strong{font-size: 22px; display: block;}
+
+/* no site tô-dô! uh uh uhuhuhuh! */
+/*
+.widget-apuracao .barra-eleicao.inativa{
+	background: #666666;
+	background: -moz-linear-gradient(left,  #666666 0%, #666666 17%, #808080 17%, #808080 34%, #b3b3b3 34%, #b3b3b3 50%, #cccccc 50%, #cccccc 66%, #e6e6e6 66%, #e6e6e6 83%, #f2f2f2 83%, #f2f2f2 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#666666), color-stop(17%,#666666), color-stop(17%,#808080), color-stop(34%,#808080), color-stop(34%,#b3b3b3), color-stop(50%,#b3b3b3), color-stop(50%,#cccccc), color-stop(66%,#cccccc), color-stop(66%,#e6e6e6), color-stop(83%,#e6e6e6), color-stop(83%,#f2f2f2), color-stop(100%,#f2f2f2));
+	background: -webkit-linear-gradient(left,  #666666 0%,#666666 17%,#808080 17%,#808080 34%,#b3b3b3 34%,#b3b3b3 50%,#cccccc 50%,#cccccc 66%,#e6e6e6 66%,#e6e6e6 83%,#f2f2f2 83%,#f2f2f2 100%);
+	background: -o-linear-gradient(left,  #666666 0%,#666666 17%,#808080 17%,#808080 34%,#b3b3b3 34%,#b3b3b3 50%,#cccccc 50%,#cccccc 66%,#e6e6e6 66%,#e6e6e6 83%,#f2f2f2 83%,#f2f2f2 100%);
+	background: -ms-linear-gradient(left,  #666666 0%,#666666 17%,#808080 17%,#808080 34%,#b3b3b3 34%,#b3b3b3 50%,#cccccc 50%,#cccccc 66%,#e6e6e6 66%,#e6e6e6 83%,#f2f2f2 83%,#f2f2f2 100%);
+	background: linear-gradientlinear-gradient(to right, #666666 0%,#666666 17%,#808080 17%,#808080 34%,#b3b3b3 34%,#b3b3b3 50%,#cccccc 50%,#cccccc 66%,#e6e6e6 66%,#e6e6e6 83%,#f2f2f2 83%,#f2f2f2 100%);
+}
+.widget-apuracao .barra-eleicao{width: 100%; height: 37px; margin: 5px 0;}
+.widget-apuracao{border: 1px solid rgb(157,158,161); padding: 10px; overflow: hidden;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box; margin: 10px 0 20px;}
+.widget-apuracao .titEspecial{color: rgb(0,159,218);font:bold 18px/18px "Arial Black", arial; text-transform: uppercase;}
+.widget-apuracao .tituloGrafico{font:bold 18px/18px "Arial Black", arial; color: #000; text-transform: uppercase;}
+.widget-apuracao .numeros {color: #000}
+.widget-apuracao .numeros span{text-align: left; text-transform: uppercase; font-size: 11.5px; line-height: 14px; padding-right: 5px;}
+.widget-apuracao .numeros strong{font-size: 35px; line-height: 28px; text-align: right;}
+.widget-apuracao footer {font: 12px arial; text-transform: uppercase; color: #6d6e70}
+.widget-apuracao footer .fl{color: #000}
+.widget-apuracao .barra-eleicao div{height: 100%;display: inline-block; position: relative;}
+.widget-apuracao .barra-eleicao div .tooltip{position: absolute; top: 5px; right: 5px; background: #FFF; padding: 5px; font: bold 10px arial; display: none; white-space: nowrap; height: 20px;}
+
+.widget-apuracao footer .fl li{float: left; width: 190px;}
+.widget-apuracao footer .fl figure{border: 3px solid;float: left;margin: 0 5px 0 0; width: 45px; height: 45px; overflow: hidden;}
+.widget-apuracao footer .fl img{margin: 0 0 -3px 0; width: 100%;}
+.widget-apuracao footer .fl .numero strong{font-size: 18px; font-weight: bold;}
+.widget-apuracao footer .fr strong{display: block; font-size: 11px; clear: both; color: #000; text-transform: none;}
+.widget-apuracao footer .fr ul{float: right; overflow: hidden; margin-bottom: 6px;}
+.widget-apuracao footer .fr li{font-size: 15px; float: left; font-weight: bold;}
+.widget-apuracao footer .fr li:first-child{color: #4d4d4f; width: 70px;}
+.widget-apuracao footer .fr li:nth-child(2){color: #6d6e70; width: 97px;}
+.widget-apuracao footer .fr li:nth-child(3){color: #b7b5b7; width: 63px;}
+*/
+
+
+.apuracaoHome.status-votacao li:nth-child(2),.apuracaoHome.status-votacao li:nth-child(3),.apuracaoHome.status-votacao li:nth-child(4) {margin-bottom: 15px }
+.apuracaoHome.status-votacao li:nth-child(4){margin-bottom: 35px}
+.status-votacao footer{font-size: 11px;color: #6d6e70; padding-top: 10px; width: 300px}
+.apuracao-mapa.status-votacao .local{font: bold 16px arial;}
+.apuracao-mapa.status-votacao .numeros strong{font: bold 34px/30px arial}
+.apuracao-mapa.status-votacao li{border: none;position: relative;}
+.classificacao li div.fr{font: 11px arial;position: relative;background-color: #FFF;z-index: 2;}
+.apuracao-mapa li{border: none;}
+.apuracao-mapa.status-votacao .classificacao li:nth-child(5):after, .apuracao-mapa.status-votacao .classificacao li:nth-child(6):after, .apuracao-mapa.status-votacao .classificacao li:nth-child(7):after{content: "";position: absolute;bottom: 3px;width: 100%;height: 0;border-bottom: 2px dotted #4d4d4f;left: 0;}
+.outrosvotos p{color: #bfb5bf;}
+.outrosvotos p:last-child{padding-top: 0;margin-bottom: 10px}
+article.fr #ifrCartoDB{width: 420px;height: 450px;margin-top: -57px !important;}
+
+.apuracao-mapa .votos{width: 128px;float: right;text-align: left;}
+.apuracao-mapa .votos strong{width: 100px;display: inline-block}
+.apuracao-mapa .numeros strong.fr{float: none;font-size: 25px}
+.apuracao-mapa .numeros{clear: left;float: none;width: 211px;overflow: visible;padding-left: 24px}
+
+.col1-3 .artigosdia .chapeu a{background: none !important; color; color: rgb(52, 91, 136) !important;}
+.col1-3 .artigosdia .chapeu a:after{display: none;}
+.outrasnoticias .maislidas *{color: #5e6062 !important;}
+.outrasnoticias .maislidas .chapeu{display: none}
+.outrasnoticias .maislidas ul li{margin-bottom: 10px;padding-bottom: 5px;}
+.outrasnoticias .col1-3{width: 315px !important;margin-right: 12px !important;}
+.outrasnoticias .col1-3:last-child{margin-right: 0 !important}
+.breaking .status-votacao{padding-top: 10px !important}
+
+.tabelaTodos .fonte{font: 12px arial;color: #6d6e70; clear: both;}
+.apuracaoHome .governador li{border: none;}
+
+.breaking .col.col12{padding: 10px}
+.breaking .titEspecial a strong{font-weight: bold}
+/*.sub{margin: -50px 0 20px 0;}*/
+.apuracao-mapa .classificacao  li:first-child +li +li +li +li{margin-top: 30px;}
+.classificacao.governador li:first-child  +li +li +li +li .fl,.classificacao.governador li:first-child  +li +li +li +li+li .fl,.classificacao.governador li:first-child  +li +li +li +li+li+li .fl{width: auto;text-transform: uppercase;padding-right: 5px;}
+.apuracaoHome.status-votacao .classificacao li .fr{font-size: 11px}
+.widget-apuracao > footer div.fr{margin-right: 13px;}
+.widget-apuracao > footer div.fr > p{clear: both}
+
+.status-votacao .classificacao figure .posicao{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; background-color: #000;opacity: 0.5}
+
+.widget-apuracao figure img{transform: translateY(-20%);filter: progid:DXImageTransform.Microsoft.Matrix(Dy=-10);}
+.widget-apuracao{border: none;}
+/* correções from pog of doom */
+.widgets .blogs ul li{width: 140px !important}
+.home .widgets .blogs ul li{width: 100%!important}
+
+.status-votacao .classificacao.governador .grafico + p{width: 165px;display: inline-block;}
+.status-votacao .classificacao.governador .grafico + p + p{width: 210px;display: inline-block;text-align: right;}
+.status-votacao .classificacao.presidente li > .fr {margin-right: 2px;}
+.breaking{padding-bottom: 20px}
+.menu-apuracao  .midiassociais{margin-right: 0;margin-left: -175px;width: 275px;}
+.senador .menu-apuracao .midiassociais,.governador .menu-apuracao .midiassociais,.presidente .menu-apuracao .midiassociais{width: 205px}
+.col4 + .col12{padding-top: 55px !important}
+#OAS_Position4, #OAS_x06{padding-bottom: 30px}

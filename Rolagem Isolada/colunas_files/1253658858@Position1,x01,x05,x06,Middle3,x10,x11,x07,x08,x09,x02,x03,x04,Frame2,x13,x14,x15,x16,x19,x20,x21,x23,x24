@@ -1,0 +1,278 @@
+function OAS_RICH(position) {
+if (position == 'Frame2') {
+document.write ('<!-- Here is the Open AdStream PCX 2.0 Code  -->\n');
+document.write ('<script type=');
+document.write ("'");
+document.write ('text/javascript');
+document.write ("'");
+document.write ('>\n');
+document.write ('OAS_rn = ');
+document.write ("'");
+document.write ('001234567890');
+document.write ("'");
+document.write ('; OAS_rns = ');
+document.write ("'");
+document.write ('1234567890');
+document.write ("'");
+document.write (';\n');
+document.write ('OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);\n');
+document.write ('document.write("<scr"+"ipt type=');
+document.write ("'");
+document.write ('text/javascript');
+document.write ("'");
+document.write (' src=');
+document.write ("'");
+document.write ('http://de.realmediadigital.com/RealMedia/ads/adstream_jx.ads/	rmestadao/certising141017/_on_" + location.hostname + location.pathname + "/1" + OAS_rns +"@x01!x01?http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/854658255/Frame2/Estadao/estadao_certisign_home_tagsky_211014/home_tagsky_certisign_2110.html/7657784f37564d4573466f41424e4435?');
+document.write ("'");
+document.write ('"+"><"+"\\');
+document.write ('/script"+">");\n');
+document.write ('</script>\n');
+document.write ('<!-- Here is the Open AdStream PCX 2.0 Code  -->\n');
+}
+if (position == 'Middle3') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/2062994223/Middle3/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'Position1') {
+document.write ('\n');
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1323288141/Position1/Estadao/eleicoes_calhau_interessante_14102014/eleicoes_calhau_ultrabanner_topo_970x90.html/7657784f37564d4573466f41424e4435" target="_blank">\n');
+document.write ('    <img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/eleicoes_calhau_interessante_14102014/eleicoes_calhau_ultrabanner_topo_970x90_1410.jpg/1413314646" style="border:0px black solid;" width="970" height="90" alt="" />\n');
+document.write ('</a>\n');
+document.write ('\n');
+document.write ('\n');
+}
+if (position == 'x01') {
+document.write ('\n');
+document.write ('\n');
+document.write ('		\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('<script type="text/javascript">\n');
+document.write ('//<![CDATA[\n');
+document.write ('var filePath                     = "http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_smile_home_bigtower_151014/1000milhas_halfPage_300x600.swf/1412350024";\n');
+document.write ('var TFSMFlash_PRETAG             = "";\n');
+document.write ('var TFSMFlash_POSTTAG            = "";\n');
+document.write ('var TFSMFlash_VERSION            = "8";\n');
+document.write ('var TFSMFlash_WMODE              = "window";\n');
+document.write ('\n');
+document.write ('			var TFSMFlash_OASCLICK           = "http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1395227113/x01/Estadao/estadao_smile_home_bigtower_151014/10milmilhas_home_bt.html/7657784f37564d4573466f41424e4435";\n');
+document.write ('	\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('var TFSMFlash_SWFCLICKVARIABLE   = "?oas="+TFSMFlash_OASCLICK + "";\n');
+document.write ('var TFSMFlash_SWFFILE            = filePath + TFSMFlash_SWFCLICKVARIABLE;\n');
+document.write ('var TFSMFlash_FSCOMMAND          = "";\n');
+document.write ('var TFSMFlash_IMAGEALTERNATE     = "http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_smile_home_bigtower_151014/1000milhas_halfPage_300x600.jpg/1412350024";\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('var TFSMFlash_OASALTTEXT         = "";\n');
+document.write ('var TFSMFlash_OASTARGET          = "_blank";\n');
+document.write ('var TFSMFlash_OASPROTOCOL        = "http://";\n');
+document.write ('var TFSMFlash_OASDIM             = "width=');
+document.write ("'");
+document.write ('300px');
+document.write ("'");
+document.write (' height=');
+document.write ("'");
+document.write ('600px');
+document.write ("'");
+document.write ('";\n');
+document.write ('var TFSMFlash_OASADID            = "OAS_RMF_x01_FLASH";\n');
+document.write ('document.write("<"+"scr"+"ipt type=\\');
+document.write ('"text/javascript\\');
+document.write ('" src=\\');
+document.write ('"http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_smile_home_bigtower_151014/TFSMFlashWrapper301.js/1412350024\\');
+document.write ('"><\\');
+document.write ('/scr"+"ipt"+">");\n');
+document.write ('//]]>\n');
+document.write ('</script>\n');
+document.write ('<noscript>\n');
+document.write ('	<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1395227113/x01/Estadao/estadao_smile_home_bigtower_151014/10milmilhas_home_bt.html/7657784f37564d4573466f41424e4435" target="_blank">\n');
+document.write ('		<img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_smile_home_bigtower_151014/1000milhas_halfPage_300x600.jpg/1412350024" width="300" height="600" alt="" style="border:0px black solid;" />\n');
+document.write ('	</a>\n');
+document.write ('</noscript>\n');
+document.write ('<img src="http://a1.adform.net/adfserve/?bn=4381183;1x1inv=1;srctype=3;ord=1395227113" border="0" width="1" height="1"/>\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('\n');
+}
+if (position == 'x02') {
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1731305306/x02/Estadao/estadao_calhau_mercadoleitor_g5190_geral_010814/g5190_bt_apoio_300x75_280514.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_calhau_mercadoleitor_g5190_geral_010814/g5190_bt_apoio_300x75_280514_novo.gif/1406844592" style="border:0px black solid;" width="300" height="75" alt="" /></a>\n');
+document.write ('\n');
+}
+if (position == 'x03') {
+document.write ('\n');
+document.write ('\n');
+document.write ('		\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('<script type="text/javascript">\n');
+document.write ('//<![CDATA[\n');
+document.write ('var filePath                     = "http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/Estadao_Home_300x75_v1A_13102014.swf/1413383023";\n');
+document.write ('var TFSMFlash_PRETAG             = "";\n');
+document.write ('var TFSMFlash_POSTTAG            = "";\n');
+document.write ('var TFSMFlash_VERSION            = "8";\n');
+document.write ('var TFSMFlash_WMODE              = "transparent";\n');
+document.write ('\n');
+document.write ('			var TFSMFlash_OASCLICK           = "http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1110375438/x03/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/qualicorp_preco_ros_halfbanner_13102014.html/7657784f37564d4573466f41424e4435";\n');
+document.write ('	\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('var TFSMFlash_SWFCLICKVARIABLE   = "?oas="+TFSMFlash_OASCLICK + "";\n');
+document.write ('var TFSMFlash_SWFFILE            = filePath + TFSMFlash_SWFCLICKVARIABLE;\n');
+document.write ('var TFSMFlash_FSCOMMAND          = "";\n');
+document.write ('var TFSMFlash_IMAGEALTERNATE     = "http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/Estadao_Home_300x75_v1A_13102014.jpg/1413383023";\n');
+document.write ('\n');
+document.write ('\n');
+document.write ('var TFSMFlash_OASALTTEXT         = "";\n');
+document.write ('var TFSMFlash_OASTARGET          = "_blank";\n');
+document.write ('var TFSMFlash_OASPROTOCOL        = "http://";\n');
+document.write ('var TFSMFlash_OASDIM             = "width=');
+document.write ("'");
+document.write ('300px');
+document.write ("'");
+document.write (' height=');
+document.write ("'");
+document.write ('75px');
+document.write ("'");
+document.write ('";\n');
+document.write ('var TFSMFlash_OASADID            = "OAS_RMF_x03_FLASH";\n');
+document.write ('document.write("<"+"scr"+"ipt type=\\');
+document.write ('"text/javascript\\');
+document.write ('" src=\\');
+document.write ('"http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/TFSMFlashWrapper301.js/1413383023\\');
+document.write ('"><\\');
+document.write ('/scr"+"ipt"+">");\n');
+document.write ('//]]>\n');
+document.write ('</script>\n');
+document.write ('<noscript>\n');
+document.write ('	<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1110375438/x03/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/qualicorp_preco_ros_halfbanner_13102014.html/7657784f37564d4573466f41424e4435" target="_blank">\n');
+document.write ('		<img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_qualicorp_preco_ros_pg_recomendadas_151014/Estadao_Home_300x75_v1A_13102014.jpg/1413383023" width="300" height="75" alt="" style="border:0px black solid;" />\n');
+document.write ('	</a>\n');
+document.write ('</noscript>\n');
+document.write ('\n');
+document.write ('\n');
+}
+if (position == 'x04') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/653692043/x04/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x05') {
+document.write ('\n');
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1422534888/x05/Estadao/estadao_central_concursos_inss_tj_rf_pr_ead_home_bigtower_300914/BT_centraldeconcursos_TJ_300914.html/7657784f37564d4573466f41424e4435" target="_blank">\n');
+document.write ('    <img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_central_concursos_inss_tj_rf_pr_ead_home_bigtower_300914/Estadao_BigTower_tj_300914.jpg/1412083859" style="border:0px black solid;" width="300" height="600" alt="" />\n');
+document.write ('</a>\n');
+document.write ('\n');
+document.write ('\n');
+}
+if (position == 'x06') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/99767109/x06/Estadao/estadao_paywall_calhau_bigtower_interessante_300x600_141014/estadao_paywall_calhau_bigtower_interessante_300x600_141014.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_paywall_calhau_bigtower_interessante_300x600_141014/paywall_calhau_bigtower_interessante_300x600_14102014.jpg/1413229598" style="border:0px black solid;" alt="" /></a>\n');
+document.write ('\n');
+}
+if (position == 'x07') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/176284472/x07/Estadao/estadao_paywall_calhau_halfbanner_servicos_234x60_141014/estadao_paywall_calhau_halfbanner_servicos_234x60_141014.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_paywall_calhau_halfbanner_servicos_234x60_141014/paywall_calhau_halfbanner_servicos_234x60_14102014.gif/1413229752" style="border:0px black solid;" alt="" /></a>\n');
+document.write ('\n');
+}
+if (position == 'x08') {
+document.write ('\n');
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1493644201/x08/Estadao/estadao_calhau_mercadoleitor_combo50_editorias_010814/combo50_calhau_halfbanner_servicos_234x60_22072014.html/7657784f37564d4573466f41424e4435" target="_blank">\n');
+document.write ('    <img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_calhau_mercadoleitor_combo50_editorias_010814/combo50_calhau_halfbanner_servicos_234x60_22072014.gif/1406846031" style="border:0px black solid;" width="234" height="60" alt="" />\n');
+document.write ('</a>\n');
+document.write ('\n');
+document.write ('\n');
+}
+if (position == 'x09') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/1779320137/x09/Estadao/estadao_central_concursos_ead_home_halfbanner_300914/estadao_central_concursos_ead_home_halfbanner_310714.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_central_concursos_ead_home_halfbanner_300914/banner_ead_20140730.jpg/1411679571" style="border:0px black solid;" alt="" /></a>\n');
+document.write ('\n');
+}
+if (position == 'x10') {
+document.write ('<IFRAME SRC="http://ad.doubleclick.net/adi/N884.estadao.com.br/B8285696.111960367;sz=388x80;click0=http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/32457122/x10/Estadao/estadao_citroen_c4_home_hardnews_031014/Halfbanner_C4Lounge_Outubro_Foguete_Tag1_Standard_Branding.html/7657784f37564d4573466f41424e4435?;kw=[url_encoded_publisher_data];ord=32457122?" WIDTH=388 HEIGHT=80 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR=');
+document.write ("'");
+document.write ('#000000');
+document.write ("'");
+document.write ('>\n');
+document.write ('<SCRIPT language=');
+document.write ("'");
+document.write ('JavaScript1.1');
+document.write ("'");
+document.write (' SRC="http://ad.doubleclick.net/adj/N884.estadao.com.br/B8285696.111960367;abr=!ie;sz=388x80;click0=http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/32457122/x10/Estadao/estadao_citroen_c4_home_hardnews_031014/Halfbanner_C4Lounge_Outubro_Foguete_Tag1_Standard_Branding.html/7657784f37564d4573466f41424e4435?;kw=[url_encoded_publisher_data];ord=32457122?">\n');
+document.write ('</SCRIPT>\n');
+document.write ('<NOSCRIPT>\n');
+document.write ('<A HREF="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/32457122/x10/Estadao/estadao_citroen_c4_home_hardnews_031014/Halfbanner_C4Lounge_Outubro_Foguete_Tag1_Standard_Branding.html/7657784f37564d4573466f41424e4435?http://ad.doubleclick.net/jump/N884.estadao.com.br/B8285696.111960367;abr=!ie4;abr=!ie5;sz=388x80;kw=[url_encoded_publisher_data];ord=32457122?">\n');
+document.write ('<IMG SRC="http://ad.doubleclick.net/ad/N884.estadao.com.br/B8285696.111960367;abr=!ie4;abr=!ie5;sz=388x80;kw=[url_encoded_publisher_data];ord=32457122?" BORDER=0 WIDTH=388 HEIGHT=80 ALT="Advertisement"></A>\n');
+document.write ('</NOSCRIPT>\n');
+document.write ('</IFRAME>');
+}
+if (position == 'x11') {
+document.write ('<script type="text/javascript">\n');
+document.write ('//<![CDATA[\n');
+document.write ('var filePath                     = "http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_qualicorp_transparencia_home_hardnews_081014/Estadao_HardNews_388x80_v2.swf/1413407302";\n');
+document.write ('var TFSMFlash_PRETAG             = "";\n');
+document.write ('var TFSMFlash_POSTTAG            = "";\n');
+document.write ('var TFSMFlash_VERSION            = "8";\n');
+document.write ('var TFSMFlash_WMODE              = "opaque";\n');
+document.write ('var TFSMFlash_OASCLICK           = "http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/822981161/x11/Estadao/estadao_qualicorp_transparencia_home_hardnews_081014/091014_estadao_qualicorp_transparencia_home_hardnews.html/7657784f37564d4573466f41424e4435";\n');
+document.write ('var TFSMFlash_SWFCLICKVARIABLE   = "?oas="+TFSMFlash_OASCLICK + "";\n');
+document.write ('var TFSMFlash_SWFFILE            = filePath + TFSMFlash_SWFCLICKVARIABLE;\n');
+document.write ('var TFSMFlash_FSCOMMAND          = "";\n');
+document.write ('var TFSMFlash_IMAGEALTERNATE     = "";\n');
+document.write ('var TFSMFlash_IMAGEALTERNATECLICK = "http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/822981161/x11/Estadao/estadao_qualicorp_transparencia_home_hardnews_081014/091014_estadao_qualicorp_transparencia_home_hardnews.html/7657784f37564d4573466f41424e4435"\n');
+document.write ('var TFSMFlash_OASALTTEXT         = "";\n');
+document.write ('var TFSMFlash_OASTARGET          = "_blank";\n');
+document.write ('var TFSMFlash_OASPROTOCOL        = "http://";\n');
+document.write ('var TFSMFlash_OASDIM             = "width=');
+document.write ("'");
+document.write ('388px');
+document.write ("'");
+document.write (' height=');
+document.write ("'");
+document.write ('80px');
+document.write ("'");
+document.write ('";\n');
+document.write ('var TFSMFlash_OASADID            = "OAS_RMF_x11_FLASH";\n');
+document.write ('\n');
+document.write ('document.write("<scr" + "ipt src=');
+document.write ("'");
+document.write ('http://de.realmediadigital.com/RealMedia/ads/Creatives/Estadao/templates/TFSMFlashWrapper301.js');
+document.write ("'");
+document.write ('>" + "</scr" + "ipt>");\n');
+document.write ('\n');
+document.write ('//]]>\n');
+document.write ('</script>\n');
+document.write ('\n');
+document.write ('<div style="position: absolute; left:-99px; top: -99px">\n');
+document.write ('<!-- COLOCAR PIXEL AQUI -->\n');
+document.write ('</div>');
+}
+if (position == 'x13') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/2104189656/x13/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x14') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/1634838402/x14/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x15') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/369839310/x15/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x16') {
+document.write ('\n');
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/2101059731/x16/Estadao/estadao_itau_futebol_home_selo_010114/itau_selo_80x25_futebol.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_itau_futebol_home_selo_010114/itau_selo_80x25_futebol.jpg/1401543935" style="border:0px black solid;" width="80" height="25" alt="" /></a>\n');
+document.write ('\n');
+}
+if (position == 'x19') {
+document.write ('		<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/L16/343578701/x19/Estadao/estadao_bradesco_financiamento_home_selo_010514/bradesco_80x25.html/7657784f37564d4573466f41424e4435" target="_blank"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/Estadao/estadao_bradesco_financiamento_home_selo_010514/bradesco_80x25.jpg/1408671520" style="border:0px black solid;" width="80" height="25" alt="" /></a>\n');
+document.write ('\n');
+document.write ('<img src="http://ia.nspmotion.com/tracking/?p=185207&sc=931&r=343578701" width="1" height="1" border="0" alt="" />');
+}
+if (position == 'x20') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/2143485501/x20/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x21') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/545659793/x21/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x23') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/190407143/x23/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+if (position == 'x24') {
+document.write ('<a href="http://rm.estadao.com.br/RealMedia/ads/click_lx.ads/estadao2014/home/1353875254/x24/default/empty.gif/7657784f37564d4573466f41424e4435" target="_top"><img src="http://oas.rmlacdn.net/RealMedia/ads/Creatives/default/empty.gif"  width="1" height="1" alt="" BORDER=0 border="0"></a>');
+}
+}
