@@ -2,7 +2,7 @@
  * wkp-main.js - versão 1.0
  * Funções básicas do Portal de Soluções
  * 
- * Criado por Alan Lisbôa em 04/02/2015
+ * Criado por  em 04/02/2015
  */
 
 $(document).ready(function () {
