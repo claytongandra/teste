@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://wkp-cloud-dev1.cloudapp.net:84/Common/Product/Listar -->
+<html class="k-webkit k-webkit41"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+    
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+<script src="kendo.all.min.js"></script>
+<script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+<script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span><script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+</script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">        
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">        
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);                  
+                });
+
+            });
+        </script>
+
+        
+
+
+
+<form action="Listar(15).html" method="post">    <div class="alert alert-danger clearfix">
+        <div class="col-xs-12 col-sm-2 col-md-1 text-center"><br><i class="fa fa-frown-o fa-5x"></i></div>
+        <div class="col-xs-12 col-sm-10 col-md-11">
+            <br>
+            <h4> Página em Construção</h4>
+            <hr>
+            <p></p>
+            <br>
+        </div>
+    </div>
+</form>
+
+    </div>
+
+
+
+
+</body></html>

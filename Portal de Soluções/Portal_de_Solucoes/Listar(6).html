@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar -->
+<html class="k-webkit k-webkit41"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+    
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+<script src="kendo.all.min.js"></script>
+<script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+<script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span><script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+</script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">        
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">        
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);                  
+                });
+
+            });
+        </script>
+
+        
+
+<form action="Listar(6).html" method="post"><div data-role="toolbar" id="ToolBar" class="k-toolbar k-widget k-toolbar-resizable" data-uid="46f0c4a9-3366-4a4e-99cd-3078588b9441"><div class="k-overflow-anchor k-button" style="visibility: hidden; width: 1px;"><span class="k-icon k-i-more"></span></div><a data-uid="8c5b5ff6-2baa-40a4-af0c-218c99edb007" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Inserir" class="k-button k-button-icontext" data-overflow="auto" style="visibility: visible;"><span class="k-icon k-i-plus"></span>Inserir</a><div data-uid="236247a8-a9c8-4144-8559-07349a7dff86" class="k-separator" data-overflow="auto" style="visibility: visible;">&nbsp;</div><a data-uid="771aa087-f48c-4ad5-88de-c1bd24579682" class="k-state-disabled k-button k-primary k-button-icontext" id="btn_Deletar" data-overflow="auto" style="visibility: visible;"><span class="k-icon k-i-close"></span>Excluir</a></div><script>
+	jQuery(function(){jQuery("#ToolBar").kendoToolBar({"items":[{"icon":"plus","text":"Inserir","url":"/Common/AIDF/Inserir","type":"button"},{"type":"separator"},{"enable":false,"icon":"close","id":"btn_Deletar","primary":true,"text":"Excluir","type":"button"}]});});
+</script><div class="k-widget k-grid" id="Grid" data-role="grid"><table role="grid"><colgroup><col style="width:25px"><col style="width:25px"><col style="width:25px"><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="Id" data-title="Id" scope="col"><input type="checkbox" name="select" class="selectAll" onclick="verificaChecks()"></th><th class="k-header" data-field="Id" data-title="" scope="col"><span class="k-link">&nbsp;</span></th><th class="k-header" data-field="Id" data-title="" scope="col"><span class="k-link">&nbsp;</span></th><th class="k-header k-filterable k-with-icon" data-field="TaxpayerName" data-title="Empresa" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/ListGrid?Grid-sort=TaxpayerName-asc">Empresa</a></th><th class="k-header k-filterable k-with-icon" data-field="ThirdPartyName" data-title="Gráfica" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/ListGrid?Grid-sort=ThirdPartyName-asc">Gráfica</a></th><th class="k-header k-filterable k-with-icon" data-field="DocumentModelName" data-title="Modelo de documento" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/ListGrid?Grid-sort=DocumentModelName-asc">Modelo de documento</a></th></tr></thead><tbody role="rowgroup"><tr data-uid="5fba2968-090e-4d3e-927f-d5635ad1dfe7" role="row"><td role="gridcell"><input type="checkbox" name="select" class="selectedIds" onclick="verificaChecks()" value="29"></td><td role="gridcell"><a title="Editar" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Editar/29" data-original-title="Editar"><i class="fa fa-pencil fa-2x prevent-row-selection"></i></a></td><td role="gridcell"><a title="Excluir" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Excluir/29" data-original-title="Apagar"><i class="fa fa-trash-o fa-2x prevent-row-selection"></i></a></td><td role="gridcell"></td><td role="gridcell">Laís e Helena Advocacia ME</td><td role="gridcell">Nota Fiscal</td></tr><tr class="k-alt" data-uid="af02d973-6ae8-46e6-b39a-b589274c433e" role="row"><td role="gridcell"><input type="checkbox" name="select" class="selectedIds" onclick="verificaChecks()" value="30"></td><td role="gridcell"><a title="Editar" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Editar/30" data-original-title="Editar"><i class="fa fa-pencil fa-2x prevent-row-selection"></i></a></td><td role="gridcell"><a title="Excluir" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Excluir/30" data-original-title="Apagar"><i class="fa fa-trash-o fa-2x prevent-row-selection"></i></a></td><td role="gridcell"></td><td role="gridcell"></td><td role="gridcell">Nota Fiscal</td></tr><tr data-uid="e2788342-a6f7-46d4-a838-65475385ca30" role="row"><td role="gridcell"><input type="checkbox" name="select" class="selectedIds" onclick="verificaChecks()" value="31"></td><td role="gridcell"><a title="Editar" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Editar/31" data-original-title="Editar"><i class="fa fa-pencil fa-2x prevent-row-selection"></i></a></td><td role="gridcell"><a title="Excluir" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Excluir/31" data-original-title="Apagar"><i class="fa fa-trash-o fa-2x prevent-row-selection"></i></a></td><td role="gridcell"></td><td role="gridcell"></td><td role="gridcell">Nota Fiscal</td></tr><tr class="k-alt" data-uid="bd0be963-5e13-45b3-924f-60e17a9d2966" role="row"><td role="gridcell"><input type="checkbox" name="select" class="selectedIds" onclick="verificaChecks()" value="64"></td><td role="gridcell"><a title="Editar" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Editar/64" data-original-title="Editar"><i class="fa fa-pencil fa-2x prevent-row-selection"></i></a></td><td role="gridcell"><a title="Excluir" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Excluir/64" data-original-title="Apagar"><i class="fa fa-trash-o fa-2x prevent-row-selection"></i></a></td><td role="gridcell">Isabelle e Catarina Esportes Ltda</td><td role="gridcell">Laís e Helena Advocacia ME</td><td role="gridcell">Nota Fiscal</td></tr><tr data-uid="9169c2b9-acfa-4700-b80d-3c8255ba5adc" role="row"><td role="gridcell"><input type="checkbox" name="select" class="selectedIds" onclick="verificaChecks()" value="65"></td><td role="gridcell"><a title="Editar" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Editar/65" data-original-title="Editar"><i class="fa fa-pencil fa-2x prevent-row-selection"></i></a></td><td role="gridcell"><a title="Excluir" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Excluir/65" data-original-title="Apagar"><i class="fa fa-trash-o fa-2x prevent-row-selection"></i></a></td><td role="gridcell">Isabelle e Catarina Esportes Ltda</td><td role="gridcell">Laís e Helena Advocacia ME</td><td role="gridcell">Nota Fiscal Avulsa</td></tr></tbody></table><div class="k-pager-wrap k-grid-pager k-widget" data-role="pager"><a class="k-link k-pager-nav k-state-disabled k-pager-first" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" title="Ir para a primeira página" tabindex="-1"><span class="k-icon k-i-seek-w">seek-w</span></a><a class="k-link k-pager-nav k-state-disabled" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" title="Vá para a página anterior" tabindex="-1"><span class="k-icon k-i-arrow-w">arrow-w</span></a><ul class="k-pager-numbers k-reset"><li><span class="k-state-selected">1</span></li></ul><a class="k-link k-pager-nav k-state-disabled" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" title="Ir para a próxima página" tabindex="-1"><span class="k-icon k-i-arrow-e">arrow-e</span></a><a class="k-link k-pager-nav k-state-disabled k-pager-last" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Listar#" title="Ir para a última página" tabindex="-1"><span class="k-icon k-i-seek-e">seek-e</span></a><span class="k-pager-info k-label">Exibindo itens 1 - 5 de 5</span></div></div><script>
+	jQuery(function(){jQuery("#Grid").kendoGrid({"columns":[{"title":"Id","width":"25px","template":"\u003cinput type=\"checkbox\" name=\"select\" class=\"selectedIds\" onclick=\u0027verificaChecks()\u0027 value=\"#=Id#\" /\u003e","field":"Id","sortable":false,"filterable":false,"encoded":true},{"width":"25px","template":"\u003ca title=\u0027Editar\u0027 href=\u0027/Common/AIDF/Editar/#=Id#\u0027 data-original-title=\u0027Editar\u0027\u003e\u003ci class=\u0027fa fa-pencil fa-2x prevent-row-selection\u0027\u003e\u003c/i\u003e\u003c/a\u003e","field":"Id","sortable":false,"filterable":false,"encoded":true},{"width":"25px","template":"\u003ca title=\u0027Excluir\u0027 href=\u0027/Common/AIDF/Excluir/#=Id#\u0027 data-original-title=\u0027Apagar\u0027\u003e\u003ci class=\u0027fa fa-trash-o fa-2x prevent-row-selection\u0027\u003e\u003c/i\u003e\u003c/a\u003e","field":"Id","sortable":false,"filterable":false,"encoded":true},{"title":"Empresa","field":"TaxpayerName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Gráfica","field":"ThirdPartyName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Modelo de documento","field":"DocumentModelName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true}],"pageable":{"buttonCount":10,"messages":{"display":"Exibindo itens {0} - {1} de {2}","empty":"Nenhum registro encontrado.","page":"Página","of":"de {0}","itemsPerPage":"itens por página","first":"Ir para a primeira página","previous":"Vá para a página anterior","next":"Ir para a próxima página","last":"Ir para a última página","refresh":"Atualizar","morePages":"Mais páginas"}},"sortable":true,"filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"scrollable":false,"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Common/AIDF/ListGrid"},"prefix":""},"pageSize":10,"page":1,"total":0,"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"Id":{"type":"number"},"SaveAndContinue":{"type":"boolean"},"AuthorizationNumber":{"type":"number","defaultValue":null},"DocumentModelId":{"type":"number"},"DocumentModelName":{"type":"string"},"TaxpayerId":{"type":"number"},"TaxpayerName":{"type":"string"},"ThirdPartyId":{"type":"number","defaultValue":null},"ThirdPartyName":{"type":"string"},"AuthorizationDate":{"type":"date","defaultValue":null},"ExpirationDate":{"type":"date","defaultValue":null},"Serie":{"type":"string"},"SubSerie":{"type":"string"},"StartInvoice":{"type":"number","defaultValue":null},"EndInvoice":{"type":"number","defaultValue":null},"DeviceTypeId":{"type":"number","defaultValue":null},"EDFDeviceTypeId":{"type":"number","defaultValue":null},"StartDevice":{"type":"number","defaultValue":null},"EndDevice":{"type":"number","defaultValue":null},"DocumentKindId":{"type":"number","defaultValue":null},"listModel":{"type":"object"}}}}}});});
+</script></form>
+<script type="text/javascript">
+    function verificaChecks() {
+
+        var checados = 0;
+        var aChk = document.getElementsByName("select");
+
+        for (var i = 0; i < aChk.length; i++) {
+            if (aChk[i].checked == true) {
+                checados++;
+            }
+        }
+
+        if (checados > 0)
+            setEnabled(true);
+        else
+            setEnabled(false);
+
+    }
+
+    function setEnabled(enabled) {
+        if (enabled) {
+            $("#btn_Deletar").removeClass("k-state-disabled").addClass("k-primary");
+        }
+        else {
+            $("#btn_Deletar").addClass("k-state-disabled");
+        }
+    }
+
+   $(document).ready(function () {
+        $('.selectAll').click(function () {
+            var checked = $(this).is(':checked');
+            $('.selectedIds').each(function () {
+                var checkBox = $(this);
+                if (checked) {
+                    checkBox.prop('checked', true);
+                }
+                else {
+                    checkBox.prop('checked', false);
+                }
+            });
+
+        });
+    });
+
+    $(document).ready(function () {
+        var grid = $("#Grid").data("kendoGrid");
+
+        $("#btn_Deletar").click(function () {
+
+            var data = {};
+
+            // mvc model binder requires arrays to be in specific format
+            grid.tbody
+                .find(":checked")
+                .each(function (idx) {
+                    data["Ids[" + idx + "]"] = $(this).val();
+                });
+
+            $.post("/Common/AIDF/ExcluirLista",
+                   data,
+                   function (result) {
+                       //rebind the grid to show the updated items                        
+                       grid.dataSource.read();
+                       eval($(result)[78].innerHTML); 
+                   }
+                );         
+            
+        });
+    });
+</script>
+    </div>
+
+
+
+
+<ul class="k-overflow-container k-list-container k-popup k-group k-reset" data-role="popup" data-uid="46f0c4a9-3366-4a4e-99cd-3078588b9441" style="display: none; position: absolute;"><li data-uid="8c5b5ff6-2baa-40a4-af0c-218c99edb007" data-overflow="auto" class="k-item k-state-default k-overflow-hidden"><a href="http://wkp-cloud-dev1.cloudapp.net:84/Common/AIDF/Inserir" class="k-overflow-button k-button k-button-icontext"><span class="k-icon k-i-plus"></span>Inserir</a></li><li data-uid="236247a8-a9c8-4144-8559-07349a7dff86" class="k-separator k-item k-state-default k-overflow-hidden" data-overflow="auto">&nbsp;</li><li data-uid="771aa087-f48c-4ad5-88de-c1bd24579682" data-overflow="auto" class="k-item k-state-default k-overflow-hidden"><a class="k-state-disabled k-overflow-button k-button k-primary k-button-icontext" id="btn_Deletar_overflow"><span class="k-icon k-i-close"></span>Excluir</a></li></ul></body></html>

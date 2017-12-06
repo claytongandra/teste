@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar -->
+<html class="k-webkit k-webkit41"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+    
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+<script src="kendo.all.min.js"></script>
+<script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+<script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span><script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+</script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">        
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">        
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);                  
+                });
+
+            });
+        </script>
+
+        
+
+<form action="Listar(2).html" method="post">    <fieldset>
+        <legend>Dados da Empresa Licenciada</legend>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label for="CompanyLicensedName">Empresa Licenciada</label>
+                <input class="k-textbox form-control" disabled="disabled" id="CompanyLicensedName" name="CompanyLicensedName" value="Wolters Kluwer Prosoft">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <label for="COLNumber">Código na COL</label>
+                <input class="k-textbox form-control" data-val="true" data-val-number="The field Código na COL must be a number." data-val-required="The Código na COL field is required." disabled="disabled" id="COLNumber" name="COLNumber" value="1234567890">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <label for="Serie">Série da licença</label>
+                <input class="k-textbox form-control" disabled="disabled" id="Serie" name="Serie" value="1">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <label for="EnviromentTypeName">Tipo de ambiente da licença</label>
+                <input class="k-textbox form-control" disabled="disabled" id="EnviromentTypeName" name="EnviromentTypeName" value="OnPremisse">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <label for="LicensingStatusName">Status da Licença</label>
+                <input class="k-textbox form-control" disabled="disabled" id="LicensingStatusName" name="LicensingStatusName" value="Ativo">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <label for="RelationTypeName">Tipo de relacionamento</label>
+                <input class="k-textbox form-control" disabled="disabled" id="RelationTypeName" name="RelationTypeName" value="Empresa Licenciada">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <label for="EndLicenseDate">Data de Vencimento</label>
+                <span class="k-widget k-datepicker k-header form-control"><span class="k-picker-wrap k-state-disabled"><input class="form-control k-input" data-val="true" data-val-date="The field Data de Vencimento must be a date." data-val-required="The Data de Vencimento field is required." disabled="disabled" id="EndLicenseDate" maxlength="10" name="EndLicenseDate" type="text" value="06/01/2015" data-role="datepicker" role="combobox" aria-expanded="false" aria-owns="EndLicenseDate_dateview" aria-disabled="true" aria-readonly="false" style="width: 100%;"><span unselectable="on" class="k-select" role="button" aria-controls="EndLicenseDate_dateview"><span unselectable="on" class="k-icon k-i-calendar">select</span></span></span></span><script>
+	jQuery(function(){jQuery("#EndLicenseDate").kendoDatePicker({"format":"dd/MM/yyyy","min":new Date(1900,0,1,0,0,0,0),"max":new Date(2099,11,31,0,0,0,0)});});
+</script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label for="ColKey">Informe a subchave de renovação</label>
+                <input class="k-textbox form-control" id="ColKey" maxlength="32" name="ColKey">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label for="ComandoBotao">Clique no botão abaixo para enviar subchave para COL</label>
+                <button id="ComandoBotao" type="button" data-role="button" class="k-button" role="button" aria-disabled="false" tabindex="0">Enviar</button><script>
+	jQuery(function(){jQuery("#ComandoBotao").kendoButton({"click":onClickSend});});
+</script>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Relação de Módulos</legend>
+        <div class="k-widget k-grid" id="Grid" data-role="grid"><table role="grid"><colgroup><col><col style="width:200px"><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header k-filterable k-with-icon" data-field="ModuleName" data-title="Módulo" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/ListGrid?Grid-sort=ModuleName-asc">Módulo</a></th><th class="k-header k-filterable k-with-icon" data-field="EndLicenseDateModule" data-title="Data de Vencimento" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/ListGrid?Grid-sort=EndLicenseDateModule-asc">Data de Vencimento</a></th><th class="k-header k-filterable k-with-icon" data-field="TypeOfLicenseName" data-title="Tipo de Licença" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/ListGrid?Grid-sort=TypeOfLicenseName-asc">Tipo de Licença</a></th><th class="k-header k-filterable k-with-icon" data-field="EnviromentTypeModuleName" data-title="Tipo de ambiente da licença" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/ListGrid?Grid-sort=EnviromentTypeModuleName-asc">Tipo de ambiente da licença</a></th><th class="k-header k-filterable k-with-icon" data-field="LicensingStatusModuleName" data-title="Status da Licença" scope="col" data-role="columnsorter"><a class="k-grid-filter" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/ListGrid?Grid-sort=LicensingStatusModuleName-asc">Status da Licença</a></th></tr></thead><tbody role="rowgroup"><tr data-uid="3be26220-c920-4d43-841c-2856585b773b" role="row"><td role="gridcell">Administrativo</td><td role="gridcell">06-jan-2015</td><td role="gridcell">Comercial</td><td role="gridcell">OnPremisse</td><td role="gridcell">Ativo</td></tr><tr class="k-alt" data-uid="ae7ae593-ea4b-48f9-a437-1257c2e30e5c" role="row"><td role="gridcell">Geral</td><td role="gridcell">06-jan-2015</td><td role="gridcell">Comercial</td><td role="gridcell">OnPremisse</td><td role="gridcell">Ativo</td></tr><tr data-uid="fefdf4be-8b6a-4072-8a10-e850ea995b33" role="row"><td role="gridcell">Fiscal</td><td role="gridcell">06-jan-2015</td><td role="gridcell">Comercial</td><td role="gridcell">OnPremisse</td><td role="gridcell">Ativo</td></tr><tr class="k-alt" data-uid="89d4acb0-29f2-4949-8dc1-cbe0b86a6ed1" role="row"><td role="gridcell">NF-e</td><td role="gridcell">06-jan-2015</td><td role="gridcell">Não Comercial</td><td role="gridcell">SaaS</td><td role="gridcell">Não Licenciado</td></tr></tbody></table><div class="k-pager-wrap k-grid-pager k-widget" data-role="pager"><a class="k-link k-pager-nav k-state-disabled k-pager-first" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" title="Ir para a primeira página" tabindex="-1"><span class="k-icon k-i-seek-w">seek-w</span></a><a class="k-link k-pager-nav k-state-disabled" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" title="Vá para a página anterior" tabindex="-1"><span class="k-icon k-i-arrow-w">arrow-w</span></a><ul class="k-pager-numbers k-reset"><li><span class="k-state-selected">1</span></li></ul><a class="k-link k-pager-nav k-state-disabled" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" title="Ir para a próxima página" tabindex="-1"><span class="k-icon k-i-arrow-e">arrow-e</span></a><a class="k-link k-pager-nav k-state-disabled k-pager-last" data-page="1" href="http://wkp-cloud-dev1.cloudapp.net:84/Authorization/LicenseRenovation/Listar#" title="Ir para a última página" tabindex="-1"><span class="k-icon k-i-seek-e">seek-e</span></a><span class="k-pager-info k-label">Exibindo itens 1 - 4 de 4</span></div></div><script>
+	jQuery(function(){jQuery("#Grid").kendoGrid({"columns":[{"title":"Módulo","field":"ModuleName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Data de Vencimento","width":"200px","field":"EndLicenseDateModule","format":"{0:dd-MMM-yyyy}","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Tipo de Licença","field":"TypeOfLicenseName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Tipo de ambiente da licença","field":"EnviromentTypeModuleName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true},{"title":"Status da Licença","field":"LicensingStatusModuleName","filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"encoded":true}],"pageable":{"buttonCount":10,"messages":{"display":"Exibindo itens {0} - {1} de {2}","empty":"Nenhum registro encontrado.","page":"Página","of":"de {0}","itemsPerPage":"itens por página","first":"Ir para a primeira página","previous":"Vá para a página anterior","next":"Ir para a próxima página","last":"Ir para a última página","refresh":"Atualizar","morePages":"Mais páginas"}},"sortable":true,"filterable":{"messages":{"info":"Exibir linhas com valores que","isTrue":"É verdade","isFalse":"É falso","filter":"Filtrar","clear":"Limpar","and":"E","or":"Ou","operator":"Operador","value":"Valor","cancel":"Cancelar"},"operators":{"string":{"eq":"É igual a","neq":"Não é igual a","startswith":"Começa com","endswith":"Termina com","contains":"Contém","doesnotcontain":"Não contém"},"number":{"eq":"É igual a","neq":"Não é igual a","gte":"É maior que ou igual a","gt":"É maior que","lte":"É menor que ou igual a","lt":"É menor que"},"date":{"eq":"É igual a","neq":"Não é igual a","gte":"É posterior ou igual a","gt":"É posterior a","lte":"É anterior ou igual a","lt":"É anterior a"},"enums":{"eq":"É igual a","neq":"Não é igual a"}}},"scrollable":false,"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Authorization/LicenseRenovation/ListGrid"},"prefix":""},"pageSize":10,"page":1,"total":0,"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"Id":{"type":"number"},"COLNumber":{"type":"number"},"EndLicenseDate":{"type":"date"},"EndLicenseDateModule":{"type":"date"},"EnviromentTypeModuleName":{"type":"string"},"EnviromentTypeName":{"type":"string"},"LicensingStatusModuleName":{"type":"string"},"LicensingStatusName":{"type":"string"},"ModuleName":{"type":"string"},"RelationTypeName":{"type":"string"},"Serie":{"type":"string"},"TypeOfLicenseName":{"type":"string"},"ColKey":{"type":"string"},"CompanyLicensedName":{"type":"string"},"ComandoBotao":{"type":"string"}}}}}});});
+</script>
+    </fieldset>
+</form>        <script>
+            function onClickSend(e) {
+                var data = $("#ColKey").val();
+
+                if (data == "") {
+                    alert("Chave deve ser informada.");
+                }
+                else {
+                    alert("Chave " + data + " enviada para COL. Consulte mais tarde o status de sua licença.");
+                }
+            }
+        </script>
+
+
+    </div>
+
+
+
+
+<div aria-hidden="true" class="k-calendar-container k-popup k-group k-reset" id="EndLicenseDate_dateview" data-role="popup" style="display: none; position: absolute;"></div></body></html>

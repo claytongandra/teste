@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://wkp-cloud-dev1.cloudapp.net:84/Authorization/IdlePolicy/Load -->
+<html class="k-webkit k-webkit41"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+    
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+<script src="kendo.all.min.js"></script>
+<script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+<script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span><script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+</script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">        
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">        
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);                  
+                });
+
+            });
+        </script>
+
+        
+<form action="Load.html" method="post"><div data-role="toolbar" id="ToolBar" class="k-toolbar k-widget k-toolbar-resizable" data-uid="af2a1948-b3eb-4fc7-b065-6123ea249348"><div class="k-overflow-anchor k-button" style="visibility: hidden; width: 1px;"><span class="k-icon k-i-more"></span></div><a data-uid="0030274f-2b79-4fa8-b7cd-90c8542f2be5" class="k-button k-primary k-button-icontext" id="salvar" data-overflow="auto" style="visibility: visible;"><img alt="icon" class="k-image" src="save.png">Salvar</a></div><script>
+	jQuery(function(){jQuery("#ToolBar").kendoToolBar({"items":[{"id":"salvar","imageUrl":"/Images/save.png","primary":true,"text":"Salvar","type":"button"}]});});
+</script><input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="2">    <div id="formValidate" data-role="validator">
+        <fieldset>
+            <legend>Tempos de expiração em minutos</legend>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="TimeOutToken">Expiração do token</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Expiração do token must be a number." data-val-required="The Expiração do token field is required." id="TimeOutToken" max="2000" min="0" name="TimeOutToken" style="display: none;" type="text" value="0" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="2000" aria-valuenow="0" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#TimeOutToken").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="TimeOutLogin">Expiração do login</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Expiração do login must be a number." data-val-required="The Expiração do login field is required." id="TimeOutLogin" max="2000" min="0" name="TimeOutLogin" style="display: none;" type="text" value="5" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="2000" aria-valuenow="5" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#TimeOutLogin").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="TimeOutSeat">Expiração de assentos</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Expiração de assentos must be a number." data-val-required="The Expiração de assentos field is required." id="TimeOutSeat" max="90" min="0" name="TimeOutSeat" style="display: none;" type="text" value="0" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#TimeOutSeat").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="AccessAttempts">Tentativas de acesso</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Tentativas de acesso must be a number." data-val-required="The Tentativas de acesso field is required." id="AccessAttempts" max="50" min="0" name="AccessAttempts" style="display: none;" type="text" value="0" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#AccessAttempts").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+            </div>
+        </fieldset>      
+    </div>
+</form>
+
+<script>
+    $(function () {
+        var validFormData = $("#formValidate").kendoValidator().data("kendoValidator");
+
+        $("#salvar").click(function () {
+            if (validFormData.validate()) {
+
+                var campos = '';
+                var quantidade = 0
+
+                if ($('#TimeOutSeat').val() == 0) {
+                    campos += ' Expiração de assentos,'
+                    quantidade += 1;
+                }
+
+                if ($('#TimeOutLogin').val() == 0) {
+                    campos += ' Expiração de login,'
+                    quantidade += 1;
+                }
+
+                if ($('#TimeOutToken').val() == 0) {
+                    campos += ' Expiração de token,'
+                    quantidade += 1;
+                }
+
+                if ($('#AccessAttempts').val() == 0) {
+                    campos += ' Tentativas de acesso,'
+                    quantidade += 1;
+                }
+                
+                campos = campos.substring(0, campos.length - 1); //retira a última vírgula
+
+                camposI = campos.substring(0, campos.lastIndexOf(','));
+                camposF = campos.substring(campos.lastIndexOf(',') + 1, campos.length);
+                camposI = ((camposI == '') ? camposI : camposI + " e");                                
+                campos = camposI + camposF;
+                
+                if (quantidade == 1) {
+                    if (confirm("O campo " + campos + " possui o valor zerado. Não haverá mais expiração para este campo. Deseja continuar?")) {
+                        $("form").submit();
+                    }
+                }
+                else if (quantidade > 1) {
+                    if (confirm("Os campos " + campos + " possuem o valor zerado. Não haverá mais expiração para esses campos. Deseja continuar?")) {
+                        $("form").submit();
+                    }
+                }
+                else{
+                    $("form").submit();
+                }
+            }
+        });
+
+    });
+</script>
+
+
+
+
+    </div>
+
+
+
+
+<ul class="k-overflow-container k-list-container k-popup k-group k-reset" data-role="popup" data-uid="af2a1948-b3eb-4fc7-b065-6123ea249348" style="display: none; position: absolute;"><li data-uid="0030274f-2b79-4fa8-b7cd-90c8542f2be5" data-overflow="auto" class="k-item k-state-default k-overflow-hidden"><a class="k-overflow-button k-button k-primary k-button-icontext" id="salvar_overflow"><img alt="icon" class="k-image" src="save.png">Salvar</a></li></ul></body></html>

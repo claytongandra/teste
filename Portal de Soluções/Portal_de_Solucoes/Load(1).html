@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://wkp-cloud-dev1.cloudapp.net:84/Authorization/PasswordPolicy/Load -->
+<html class="k-webkit k-webkit41"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+    
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+<script src="kendo.all.min.js"></script>
+<script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+<script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span><script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+</script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">        
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">        
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);                  
+                });
+
+            });
+        </script>
+
+        
+<form action="Load(1).html" method="post"><div data-role="toolbar" id="ToolBar" class="k-toolbar k-widget k-toolbar-resizable" data-uid="46ddab1a-6ce8-406b-9c3d-f39919455675"><div class="k-overflow-anchor k-button" style="visibility: hidden; width: 1px;"><span class="k-icon k-i-more"></span></div><a data-uid="106a7a65-c659-4658-9b07-c3735d051a9b" class="k-button k-primary k-button-icontext" id="salvar" data-overflow="auto" style="visibility: visible;"><img alt="icon" class="k-image" src="save.png">Salvar</a></div><script>
+	jQuery(function(){jQuery("#ToolBar").kendoToolBar({"items":[{"id":"salvar","imageUrl":"/Images/save.png","primary":true,"text":"Salvar","type":"button"}]});});
+</script><input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="1">        <div id="formValidate" data-role="validator">
+        <fieldset>
+            <legend>Política de senhas</legend>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="MinimumNumberOfChar">Qtd. mínima de caracteres</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Qtd. mínima de caracteres must be a number." data-val-range="The field Qtd. mínima de caracteres must be between 6 and 20." data-val-range-max="20" data-val-range-min="6" data-val-required="The Qtd. mínima de caracteres field is required." id="MinimumNumberOfChar" max="9999" min="6" name="MinimumNumberOfChar" style="display: none;" type="text" value="6" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="6" aria-valuemax="9999" aria-valuenow="6" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#MinimumNumberOfChar").kendoNumericTextBox({"change":AlterValue,"spin":AlterValue,"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="MaximumNumberOfChar">Qtd. máxima de caracteres</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Qtd. máxima de caracteres must be a number." data-val-range="The field Qtd. máxima de caracteres must be between 6 and 20." data-val-range-max="20" data-val-range-min="6" data-val-required="The Qtd. máxima de caracteres field is required." id="MaximumNumberOfChar" max="20" min="0" name="MaximumNumberOfChar" style="display: none;" type="text" value="8" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="20" aria-valuenow="8" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#MaximumNumberOfChar").kendoNumericTextBox({"change":AlterValue,"spin":AlterValue,"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="ExpireDays">Quantidade de dias para expiração da senha</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Quantidade de dias para expiração da senha must be a number." data-val-range="The field Quantidade de dias para expiração da senha must be between 0 and 75." data-val-range-max="75" data-val-range-min="0" data-val-required="The Quantidade de dias para expiração da senha field is required." id="ExpireDays" max="75" min="0" name="ExpireDays" style="display: none;" type="text" value="0" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="75" aria-valuenow="0" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#ExpireDays").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    <label for="AmountOfNewPasswords">Intervalo minimo em dias para repetição de senha</label>
+                    <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-val="true" data-val-number="The field Intervalo minimo em dias para repetição de senha must be a number." data-val-range="The field Intervalo minimo em dias para repetição de senha must be between 0 and 180." data-val-range-max="180" data-val-range-min="0" data-val-required="The Intervalo minimo em dias para repetição de senha field is required." id="AmountOfNewPasswords" max="180" min="0" name="AmountOfNewPasswords" style="display: none;" type="text" value="30" data-role="numerictextbox" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="180" aria-valuenow="30" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><script>
+	jQuery(function(){jQuery("#AmountOfNewPasswords").kendoNumericTextBox({"format":"n0","decimals":0});});
+</script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="NumberRequired">Requer números</label>
+                    <input data-val="true" data-val-required="The Requer números field is required." id="NumberRequired" name="NumberRequired" type="checkbox" value="true"><input name="NumberRequired" type="hidden" value="false">     
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                     <label for="SpecialCharacters">Requer caracteres especiais</label>
+                    <input data-val="true" data-val-required="The Requer caracteres especiais field is required." id="SpecialCharacters" name="SpecialCharacters" type="checkbox" value="true"><input name="SpecialCharacters" type="hidden" value="false">     
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="UpperCaseRequired">Requer letras maiúsculas</label>
+                    <input data-val="true" data-val-required="The Requer letras maiúsculas field is required." id="UpperCaseRequired" name="UpperCaseRequired" type="checkbox" value="true"><input name="UpperCaseRequired" type="hidden" value="false">     
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <label for="LowerCaseRequired">Requer letras minúsculas</label>
+                    <input data-val="true" data-val-required="The Requer letras minúsculas field is required." id="LowerCaseRequired" name="LowerCaseRequired" type="checkbox" value="true"><input name="LowerCaseRequired" type="hidden" value="false">     
+                </div>
+            </div>
+        </fieldset>
+        </div>
+</form>
+
+
+<script>
+    function AlterValue() {
+        var minNumberOfChars = $("#MinimumNumberOfChar").val();
+        var maxNumberOfChars = $("#MaximumNumberOfChar").val();
+
+        if (parseInt(minNumberOfChars) > parseInt(maxNumberOfChars)) {
+            alert('Quantidade mínima de caracteres deve ser menor ou igual a quantidade máxima de caracteres.');
+        }
+    }
+
+    $(function () {
+        var validFormData = $("#formValidate").kendoValidator().data("kendoValidator");
+
+        $("#salvar").click(function () {
+            if (validFormData.validate()) {
+                var minNumberOfChars = $("#MinimumNumberOfChar").val();
+                var maxNumberOfChars = $("#MaximumNumberOfChar").val();
+
+                if (parseInt(minNumberOfChars) > parseInt(maxNumberOfChars)) {
+                    alert('Quantidade mínima de caracteres deve ser menor ou igual a quantidade máxima de caracteres.');
+                }
+                else
+                {
+                $("form").submit();
+            }
+               
+            }
+        });
+
+    });
+</script>
+
+
+    </div>
+
+
+
+
+<ul class="k-overflow-container k-list-container k-popup k-group k-reset" data-role="popup" data-uid="46ddab1a-6ce8-406b-9c3d-f39919455675" style="display: none; position: absolute;"><li data-uid="106a7a65-c659-4658-9b07-c3735d051a9b" data-overflow="auto" class="k-item k-state-default k-overflow-hidden"><a class="k-overflow-button k-button k-primary k-button-icontext" id="salvar_overflow"><img alt="icon" class="k-image" src="save.png">Salvar</a></li></ul></body></html>
