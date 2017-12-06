@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="page-done fixed-nav" cz-shortcut-listen="true">
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav nav-list" id="side-menu">
+                    <li class="nav-header">
+
+                        <form>
+                            <input class="search-query" placeholder="Pesquisar..." type="text">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li class="search-menu-group" id="search-result-menu-list-030679b4-b48b-457b-90df-eaee912406e4" style="display: none;">
+                        <a href="#"><i class="fa fa-search"></i><span class="nav-label">Resultado </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level submenu search-result-list list collapse" aria-expanded="true">
+                            <li class="search-result-no-match text-center strong" style="display: none;"></li>
+                        </ul>
+                    </li>
+                    <li class="menu-group" id="recentes-menu-list-66df4df5-564b-4e74-a652-9ef804fefd5f">
+                        <a href="#"><i class="fa fa-clock-o"></i><span class="nav-label">Recentes </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level recent-list collapse">
+                            <li class="menu-group">
+                                <a data-menu-uid="56" data-role="ajax" href="#" data-link="../Common/LegalRepresentative/Listar">
+                                    <span class="menu-name">Representantes legais</span>
+                                </a>
+                                <i class="fa fa-star-o favicon add-favorite"></i>
+                            </li>
+                            <li class="menu-group">
+                                <a data-menu-uid="19" data-role="ajax" href="#" data-link="../Common/ThirdParty/Listar">
+                                    <span class="menu-name">Terceiros</span>
+                                </a>
+                                <i class="fa fa-star-o favicon add-favorite"></i>
+                            </li>
+                            <li class="menu-group">
+                                <a data-menu-uid="16" data-role="ajax" href="#" data-link="../Common/Accountant/Listar">
+                                    <span class="menu-name">Contadores</span>
+                                </a>
+                                <i class="fa fa-star-o favicon add-favorite"></i>
+                            </li>
+                            <li class="menu-group">
+                                <a data-menu-uid="2" data-role="ajax" href="#" data-link="../Authorization/SeatClear/Listar">
+                                    <span class="menu-name">Controle de uso de assentos</span>
+                                </a>
+                                <i class="fa fa-star-o favicon add-favorite"></i>
+                            </li>
+                            <li class="menu-group">
+                                <a data-menu-uid="1" data-role="ajax" href="#" data-link="../Authorization/LoginClear/Listar">
+                                    <span class="menu-name">Controle de sessões ativas</span>
+                                </a>
+                                <i class="fa fa-star-o favicon add-favorite"></i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group" id="favorite-menu-list-66df4df5-564b-4e74-a652-9ef804fefd5f">
+                        <a href="#"><i class="fa fa-star"></i><span class="nav-label">Favoritos </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level submenu favorite-list list collapse"></ul>
+                    </li>
+                    <li class="menu-group">
+                        <a href="#"><i class="fa fa-cog"></i> <span class="nav-label">Administrativo</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level submenu collapse">
+                            <li class="menu-group">
+                                <a href="#">PROEMPs <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="8" data-role="ajax" href="#" data-link="General/ProEmp/Listar(23).html">
+                                            <span class="menu-name">PROEMPs</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Configurações gerais <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="5" data-role="ajax" href="#" data-link="../Authorization/PasswordPolicy/Load">
+                                            <span class="menu-name">Política de senhas</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="4" data-role="ajax" href="#" data-link="../Authorization/IdlePolicy/Load">
+                                            <span class="menu-name">Política de expiração de acesso</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="3" data-role="ajax" href="#" data-link="../Authorization/IntervalPolicy/Listar">
+                                            <span class="menu-name">Política de períodos de acesso</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="6" data-role="ajax" href="#" data-link="../Authorization/IPPolicy/Listar">
+                                            <span class="menu-name">Política de IPs de acesso</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Usuários <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="13" data-role="ajax" href="#" data-link="../General/User/Listar">
+                                            <span class="menu-name">Usuários</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="26" data-role="ajax" href="#" data-link="../Authorization/UnlockUsers/Listar">
+                                            <span class="menu-name">Desbloqueio de usuários</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="12" data-role="ajax" href="#" data-link="../General/UserGroup/Listar">
+                                            <span class="menu-name">Grupo de usuários</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Acessos <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="1" data-role="ajax" href="#" data-link="../Authorization/LoginClear/Listar">
+                                            <span class="menu-name">Controle de sessões ativas</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="2" data-role="ajax" href="#" data-link="../Authorization/SeatClear/Listar">
+                                            <span class="menu-name">Controle de uso de assentos</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Licenciamento <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="64" data-role="ajax" href="#" data-link="../Authorization/LicenseRenovation/Listar">
+                                            <span class="menu-name">Renovação de licenciamento</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group">
+                        <a href="#"><i class="fa fa-file"></i> <span class="nav-label">Geral</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level submenu collapse">
+                            <li class="menu-group">
+                                <a href="#">Pessoas <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="17" data-role="ajax" href="#" data-link="../Common/TaxpayerGroup/Listar">
+                                            <span class="menu-name">Grupos de empresas</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="56" data-role="ajax" href="#" data-link="../Common/LegalRepresentative/Listar">
+                                            <span class="menu-name">Representantes legais</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="19" data-role="ajax" href="#" data-link="../Common/ThirdParty/Listar">
+                                            <span class="menu-name">Terceiros</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="16" data-role="ajax" href="#" data-link="../Common/Accountant/Listar">
+                                            <span class="menu-name">Contadores</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Produtos e serviços <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="49" data-role="ajax" href="#" data-link="../Common/Product/Listar">
+                                            <span class="menu-name">Produtos</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="48" data-role="ajax" href="#" data-link="../Common/ProductGroup/Listar">
+                                            <span class="menu-name">Grupos de produtos</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="20" data-role="ajax" href="#" data-link="../Common/UnitMeasure/Listar">
+                                            <span class="menu-name">Unidades de medida</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="40" data-role="ajax" href="#" data-link="../Common/UnitMeasureConversionFactor/Listar">
+                                            <span class="menu-name">Conversão de unidades de medida</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="45" data-role="ajax" href="#" data-link="../Common/MunicipalService/Listar">
+                                            <span class="menu-name">Serviços municipais</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="46" data-role="ajax" href="#" data-link="../Common/TaxManagement/Listar">
+                                            <span class="menu-name">Grupos de serviços</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="44" data-role="ajax" href="#" data-link="../Common/FixedAsset/Listar">
+                                            <span class="menu-name">Ativos fixos</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-group">
+                                <a href="#">Tabelas e configurações <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level submenu collapse">
+                                    <li class="menu-group">
+                                        <a data-menu-uid="67" data-role="ajax" href="#" data-link="../Common/Tables/Listar">
+                                            <span class="menu-name">Tabelas</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="47" data-role="ajax" href="#" data-link="../Common/CstPisCofinsException/Listar">
+                                            <span class="menu-name">Exceções de CST - PIS/COFINS</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="61" data-role="ajax" href="#" data-link="../Common/CstPisCofinsRateException/Listar">
+                                            <span class="menu-name">Alíquotas de exceções de CST - PIS/COFINS</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="41" data-role="ajax" href="#" data-link="../Common/AIDF/Listar">
+                                            <span class="menu-name">AIDF</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="42" data-role="ajax" href="#" data-link="../Common/ECF/Listar">
+                                            <span class="menu-name">ECF</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                    <li class="menu-group">
+                                        <a data-menu-uid="43" data-role="ajax" href="#" data-link="../Common/DocumentKind/Listar">
+                                            <span class="menu-name">Espécies de documento</span>
+                                        </a>
+                                        <i class="fa fa-star-o favicon add-favorite"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page wraper -->
+
+        <div id="page-wrapper" class="gray-bg" style="min-height: 765px;">
+            <!-- Top Navbar -->
+            <div class="row border-bottom">
+                <nav class="navbar navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#" id="menu-resize">
+                            <i class="fa fa-bars"></i>
+                        </a> <a class="navbar-logo" href="/"></a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="hidden-xs">
+                            <a href="#" class="count-info" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Repositório')">
+                                <i class="fa fa-folder-open"></i> <span class="label label-discreet">00</span>
+                            </a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Empresa sugerida')">
+                                <span class="company-title">Grupo ou Empresa</span> <span class="company-name">Grupo Sugerido</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-danger">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Notificações')">
+                                        <div>
+                                            <i class="fa fa-download fa-fw"></i> Liberado Service Pack
+                                            3 <span class="pull-right text-muted small">6 min.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Notificações')">
+                                        <div>
+                                            <i class="fa fa-check fa-fw"></i> Folha de Pagamento concluída
+                                            <span class="pull-right text-muted small">11 min.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Notificações')">
+                                        <div>
+                                            <i class="fa fa-info-circle fa-fw"></i> Informações importantes
+                                            <span class="pull-right text-muted small">13 min.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Notificações')">
+                                            <strong>Veja todas notificações</strong> <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <div class="user-menu">
+                                        <img class="img-circle" src="~/Content/Images/user-without-image.jpg">
+                                        <span class="user-name">Cadastro Completo de Usuário</span> <span class="user-position">
+                                            Administrador do Sistema
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" onclick="createPage('/General/User/Editar/172', 'Cadastro Completoc243045c-e52f-437f-8c17-d106ce5c0a22')">
+                                        Meu Perfil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="createPage('/Authorization/PasswordChange/Load', 'Alterar senha')">
+                                        Alterar senha
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Idiomas (Languages)</li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Idiomas')">
+                                        Português
+                                        (pt-BR)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Idiomas')">
+                                        English
+                                        (en-US)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Idiomas')">
+                                        Español
+                                        (es)
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-submenu pull-left">
+                                    <a href="#">Temas</a>
+                                    <ul class="dropdown-menu rightcorner">
+                                        <li><a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Temas')">Padrão</a></li>
+                                        <li><a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Temas')">Blue</a></li>
+                                        <li><a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Temas')">Silver</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-question-circle"></i><span class="hidden-xs hidden-sm">
+                                    Ajuda
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-help">
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Ajuda')">
+                                        <i class="fa fa-question"></i>
+                                        Ajuda e Suporte
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Ajuda')">
+                                        <i class="fa fa-desktop"></i>
+                                        Entenda sua área de trabalho
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="createPage('./Portal_de_Solucoes/NotImplemented.html', 'Ajuda')">
+                                        <i class="fa fa-keyboard-o"></i>
+                                        Teclas de atalho
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Logoff">
+                                <i class="fa fa-sign-out"></i><span class="hidden-xs hidden-sm">
+                                    Sair
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Main view  -->
+            <div class="main-view">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="tab-links">
+                    <li class="active">
+                        <a href="#tabFirst" id="tabFir" data-title="Meu Painel" data-toggle="tab">
+                            Meu
+                            Painel
+                        </a>
+                    </li>
+                    <li id="tabLast" class="pull-right invisible">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu pull-right" id="tabs-collapsed"></ul>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="tabFirst">
+                        @*<iframe id="src-tabFirst" width="100%" height="100%" src="MyPanel/index.html" frameborder="0" style="height: 2321px;"></iframe>*@
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="footer">
+                <div class="pull-right"> Portal de Soluções v2.0 </div>
+                <div> <strong>Copyright</strong> Wolters Kluwer Prosoft © 2015 </div>
+            </div>
+        </div>
+        <!-- End page wrapper-->
+
+    </div>
+    <!-- End wrapper-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquerymenu")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

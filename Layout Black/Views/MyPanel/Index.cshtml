@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0045)http://wkp-cloud-dev1.cloudapp.net:84/MyPanel -->
+<html class="k-webkit k-webkit41">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.common.min.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.bootstrap.min.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.dataviz.bootstrap.min.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/frameworks/kendo/2014.2.903/kendo.rtl.min.css" rel="stylesheet">
+
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/Fonts/Open-Sans/open-sans.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://wkp-cloud-dev1.cloudapp.net:84/Content/wkp.css" rel="stylesheet">
+
+
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+
+    <script src="pace.min.js"></script>
+
+    <script src="jquery.min.js"></script>
+    <script src="kendo.all.min.js"></script>
+    <script src="kendo.aspnetmvc.min.js"></script>
+
+    <script src="kendo.culture.pt-BR.min.js"></script>
+    <script src="kendo.messages.pt-BR.min.js"></script>
+
+    <script src="jquery.validate.min.js"></script>
+
+    <script src="wkp-content.js"></script>
+
+
+    <script>kendo.culture("pt-BR")</script>
+
+    <title>Portal de Soluções</title>
+
+
+
+</head>
+<body class="content-body page-done  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="content-inner">
+
+        <span id="notification" data-role="notification" style="display: none;"></span>
+        <script>
+	jQuery(function(){jQuery("#notification").kendoNotification({"position":{"top":30},"allowHideAfter":1000,"autoHideAfter":0,"templates":[{"type":"error","templateId":"errorTemplate"},{"type":"success","templateId":"successTemplate"}]});});
+        </script>
+
+        <script id="errorTemplate" type="text/x-kendo-template">
+            <div class="error">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script id="successTemplate" type="text/x-kendo-template">
+            <div class="success">
+                <h3>#= title #</h3>
+                <p>#= message #</p>
+                <p style="font-size: 13px">Clique nesta mensagem para continuar</p>
+            </div>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var notification = $("#notification").data("kendoNotification");
+
+                var notificationType = "";
+                var notificationTitle = "";
+                var notificationMessage = "";
+
+                if (notificationMessage != "") {
+                    notification.show({
+                        title: notificationTitle,
+                        message: notificationMessage
+                    }, notificationType);
+                }
+
+                $("input").blur(function () {
+                    n = $(this).val();
+                    n = $.trim(n);
+                    $(this).val(n);
+                });
+
+            });
+        </script>
+
+
+
+        <div style="background-color: #fff">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <span class="label label-success pull-right">Mensal</span>
+                            <h5>Documentos</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <h1 class="no-margins">41.526</h1>
+                            <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                            <small>Documentos registrados</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <span class="label label-info pull-right">Anual</span>
+                            <h5>Clientes</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <h1 class="no-margins">122</h1>
+                            <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                            <small>Clientes novos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <span class="label label-primary pull-right">Hoje</span>
+                            <h5>Processamentos</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <h1 class="no-margins">106</h1>
+                            <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
+                            <small>Processamentos concluídos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <span class="label label-danger pull-right">Atenção</span>
+                            <h5>Produtividade</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <h1 class="no-margins">38</h1>
+                            <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+                            <small>Produtividade geral</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Visão Geral</h5>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-xs btn-white">Hoje</button>
+                                    <button type="button" class="btn btn-xs btn-white active">Mensal</button>
+                                    <button type="button" class="btn btn-xs btn-white">Anual</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="flot-chart">
+
+                                        <div class="flot-chart-content" id="flot-dashboard-chart" style="padding: 0px; position: relative;">
+                                            <canvas class="base" width="1063" height="200"></canvas><canvas class="overlay" width="1063" height="200" style="position: absolute; left: 0px; top: 0px;"></canvas>
+                                            <div class="tickLabels" style="font-size:smaller">
+                                                <div class="xAxis x1Axis" style="color:#838383">
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:59px;top:185px;width:88px">
+                                                        Jan
+                                                        3
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:158px;top:185px;width:88px">
+                                                        Jan
+                                                        6
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:257px;top:185px;width:88px">
+                                                        Jan
+                                                        9
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:357px;top:185px;width:88px">
+                                                        Jan
+                                                        12
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:456px;top:185px;width:88px">
+                                                        Jan
+                                                        15
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:555px;top:185px;width:88px">
+                                                        Jan
+                                                        18
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:654px;top:185px;width:88px">
+                                                        Jan
+                                                        21
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:753px;top:185px;width:88px">
+                                                        Jan
+                                                        24
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:852px;top:185px;width:88px">
+                                                        Jan
+                                                        27
+                                                    </div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:center;left:951px;top:185px;width:88px">
+                                                        Jan
+                                                        30
+                                                    </div>
+                                                </div>
+                                                <div class="yAxis y1Axis" style="color:#838383">
+                                                    <div class="tickLabel" style="position:absolute;text-align:right;top:173px;right:1038px;width:25px">0</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:right;top:131px;right:1038px;width:25px">250</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:right;top:90px;right:1038px;width:25px">500</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:right;top:49px;right:1038px;width:25px">750</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:right;top:8px;right:1038px;width:25px">1000</div>
+                                                </div>
+                                                <div class="yAxis y2Axis" style="color:#838383">
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:173px;left:1051px;width:12px">0</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:143px;left:1051px;width:12px">5</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:114px;left:1051px;width:12px">10</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:85px;left:1051px;width:12px">15</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:55px;left:1051px;width:12px">20</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:26px;left:1051px;width:12px">25</div>
+                                                    <div class="tickLabel" style="position:absolute;text-align:left;top:-3px;left:1051px;width:12px">30</div>
+                                                </div>
+                                            </div>
+                                            <div class="legend">
+                                                <div style="position: absolute; width: 98px; height: 30px; top: 9px; left: 35px; opacity: 0.85; background-color: rgb(255, 255, 255);">
+                                                </div>
+                                                <table style="position:absolute;top:9px;left:35px;;font-size:smaller;color:#838383">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="legendColorBox">
+                                                                <div style="border:1px solid #000000;padding:1px">
+                                                                    <div style="width:4px;height:0;border:5px solid #1ab394;overflow:hidden"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="legendLabel">Processamento</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="legendColorBox">
+                                                                <div style="border:1px solid #000000;padding:1px">
+                                                                    <div style="width:4px;height:0;border:5px solid #464f88;overflow:hidden"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="legendLabel">Produtividade</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul class="stat-list">
+                                        <li>
+                                            <h2 class="no-margins">2451</h2>
+                                            <small>Processos no periodo</small>
+                                            <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i></div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h2 class="no-margins ">5106</h2>
+                                            <small>Processos no período anterior</small>
+                                            <div class="stat-percent">56% <i class="fa fa-level-down text-navy"></i></div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 56%;" class="progress-bar"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h2 class="no-margins ">9000</h2>
+                                            <small>Média de processamento</small>
+                                            <div class="stat-percent">100% <i class="fa fa-bolt text-navy"></i></div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 100%;" class="progress-bar"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Tarefas</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <table class="table table-hover no-margins">
+                                <thead>
+                                    <tr>
+                                        <th style="width:20%">Status</th>
+                                        <th style="width:40%">Empresa</th>
+                                        <th style="width:40%">Processo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><small>Pendente...</small></td>
+                                        <td>Moreira Comercial</td>
+                                        <td class="text-navy">Importar CT-e</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-warning">Processando</span> </td>
+                                        <td>Moreira Comercial</td>
+                                        <td class="text-navy">Importar NFS-e</td>
+                                    </tr>
+                                    <tr>
+                                        <td><small>Pendente...</small> </td>
+                                        <td>Martos Serviços</td>
+                                        <td class="text-navy">Analisar Documentos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><small>Pendente...</small> </td>
+                                        <td>Quadrado Sports</td>
+                                        <td class="text-navy">Apurar Impostos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-primary">Completado</span> </td>
+                                        <td>Nortevel (Joinville)</td>
+                                        <td class="text-navy">Gerar Obrig. Legais</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-primary">Completado</span> </td>
+                                        <td>Nortevel (São Paulo)</td>
+                                        <td class="text-navy">Gerar Obrig. Legais</td>
+                                    </tr>
+                                    <tr>
+                                        <td><small>Pendente...</small> </td>
+                                        <td>Sigafarma</td>
+                                        <td class="text-navy">Emitir Guias</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Processos</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <table class="table table-hover margin bottom">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 1%" class="text-center">No.</th>
+                                            <th>Transação</th>
+                                            <th class="text-center">% Concluído</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                Apuração Fiscal - Nortevel (Joinville)
+                                            </td>
+                                            <td class="text-center"><span class="label label-primary">91 %</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td>
+                                                Importação NF-e - Supermercado Mantes
+                                            </td>
+                                            <td class="text-center"><span class="label label-primary">85 %</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3</td>
+                                            <td>
+                                                Análise Fiscal - Moreira Comercial
+                                            </td>
+                                            <td class="text-center"><span class="label label-warning">53 %</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">4</td>
+                                            <td> Análise Fiscal - Imirim</td>
+                                            <td class="text-center"><span class="label label-primary">98 %</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5</td>
+                                            <td>Folha de Pagamento - Bonafé</td>
+                                            <td class="text-center"><span class="label label-primary">52 %</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">6</td>
+                                            <td>Importação NF-e - Bompreço</td>
+                                            <td class="text-center"><span class="label label-primary">10 %</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Minhas atividades</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <ul class="todo-list m-t small-list">
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                    <span class="m-l-xs todo-completed">Cobrar reduções z da Bonafé</span>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">Ligar na gráfica para solicitar formulários</span>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">Enviar carteira de trabalho para Moreira</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">Solicitar agendamento na receita federal</span>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                    <span class="m-l-xs todo-completed">Elaborar orçamento do próximo período</span>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">Lembrar RH de solicitar documentos</span>
+                                </li>
+                                <li>
+                                    <a href="http://wkp-cloud-dev1.cloudapp.net:84/MyPanel#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">Ligar para Sr. Alencar (Bonafé)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="jquery.flot.js"></script>
+    <script src="jquery.flot.tooltip.min.js"></script>
+    <script src="jquery.flot.resize.js"></script>
+    <script src="jquery.flot.pie.js"></script>
+    <script src="jquery.flot.spline.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            doFlot();
+        });
+
+        function doFlot() {
+
+            // Gráfico
+            var data2 = [
+               [gd(2012, 1, 1), 7], [gd(2012, 1, 2), 6], [gd(2012, 1, 3), 4], [gd(2012, 1, 4), 8],
+               [gd(2012, 1, 5), 9], [gd(2012, 1, 6), 7], [gd(2012, 1, 7), 5], [gd(2012, 1, 8), 4],
+               [gd(2012, 1, 9), 7], [gd(2012, 1, 10), 8], [gd(2012, 1, 11), 9], [gd(2012, 1, 12), 6],
+               [gd(2012, 1, 13), 4], [gd(2012, 1, 14), 5], [gd(2012, 1, 15), 11], [gd(2012, 1, 16), 8],
+               [gd(2012, 1, 17), 8], [gd(2012, 1, 18), 11], [gd(2012, 1, 19), 11], [gd(2012, 1, 20), 6],
+               [gd(2012, 1, 21), 6], [gd(2012, 1, 22), 8], [gd(2012, 1, 23), 11], [gd(2012, 1, 24), 13],
+               [gd(2012, 1, 25), 7], [gd(2012, 1, 26), 9], [gd(2012, 1, 27), 9], [gd(2012, 1, 28), 8],
+               [gd(2012, 1, 29), 5], [gd(2012, 1, 30), 8], [gd(2012, 1, 31), 25]
+            ];
+
+            var data3 = [
+                [gd(2012, 1, 1), 800], [gd(2012, 1, 2), 500], [gd(2012, 1, 3), 600], [gd(2012, 1, 4), 700],
+                [gd(2012, 1, 5), 500], [gd(2012, 1, 6), 456], [gd(2012, 1, 7), 800], [gd(2012, 1, 8), 589],
+                [gd(2012, 1, 9), 467], [gd(2012, 1, 10), 876], [gd(2012, 1, 11), 689], [gd(2012, 1, 12), 700],
+                [gd(2012, 1, 13), 500], [gd(2012, 1, 14), 600], [gd(2012, 1, 15), 700], [gd(2012, 1, 16), 786],
+                [gd(2012, 1, 17), 345], [gd(2012, 1, 18), 888], [gd(2012, 1, 19), 888], [gd(2012, 1, 20), 888],
+                [gd(2012, 1, 21), 987], [gd(2012, 1, 22), 444], [gd(2012, 1, 23), 999], [gd(2012, 1, 24), 567],
+                [gd(2012, 1, 25), 786], [gd(2012, 1, 26), 666], [gd(2012, 1, 27), 888], [gd(2012, 1, 28), 900],
+                [gd(2012, 1, 29), 178], [gd(2012, 1, 30), 555], [gd(2012, 1, 31), 993]
+            ];
+
+            var dataset = [
+                {
+                    label: "Processamento",
+                    data: data3,
+                    color: "#1ab394",
+                    bars: {
+                        show: true,
+                        align: "center",
+                        barWidth: 24 * 60 * 60 * 600,
+                        lineWidth: 0
+                    }
+
+                }, {
+                    label: "Produtividade",
+                    data: data2,
+                    yaxis: 2,
+                    color: "#464f88",
+                    lines: {
+                        lineWidth: 1,
+                        show: true,
+                        fill: true,
+                        fillColor: {
+                            colors: [{
+                                opacity: 0.2
+                            }, {
+                                opacity: 0.2
+                            }]
+                        }
+                    },
+                    splines: {
+                        show: false,
+                        tension: 0.6,
+                        lineWidth: 1,
+                        fill: 0.1
+                    },
+                }
+            ];
+
+            var options = {
+                xaxis: {
+                    mode: "time",
+                    tickSize: [3, "day"],
+                    tickLength: 0,
+                    axisLabel: "Date",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Arial',
+                    axisLabelPadding: 10,
+                    color: "#838383"
+                },
+                yaxes: [{
+                    position: "left",
+                    max: 1070,
+                    color: "#838383",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Arial',
+                    axisLabelPadding: 3
+                }, {
+                    position: "right",
+                    clolor: "#838383",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: ' Arial',
+                    axisLabelPadding: 67
+                }
+                ],
+                legend: {
+                    noColumns: 1,
+                    labelBoxBorderColor: "#000000",
+                    position: "nw"
+                },
+                grid: {
+                    hoverable: false,
+                    borderWidth: 0,
+                    color: '#838383'
+                }
+            };
+
+            function gd(year, month, day) {
+                return new Date(year, month - 1, day).getTime();
+            }
+
+            var previousPoint = null, previousLabel = null;
+
+            $.plot($("#flot-dashboard-chart"), dataset, options);
+        }
+    </script>
+
+
+
+</body>
+</html>
