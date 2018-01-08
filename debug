@@ -1,0 +1,32 @@
+#if (DEBUG == true)
+            if (CookieAuthentication == null)
+            {
+                HttpCookie cookieAuthentication = new HttpCookie(HashCompute.GetMd5Hash("ALUserCookieAuthentication")); //29b27db9c174244ceeb47405d77b658b
+                cookieAuthentication[HashCompute.GetMd5Hash("USULOGIN")] = InternalCryptography.Criptografar("USerMOCK");
+                cookieAuthentication[HashCompute.GetMd5Hash("USUMAQIP4")] = InternalCryptography.Criptografar(filterContext.HttpContext.Request.ServerVariables["REMOTE_ADDR"]);
+                cookieAuthentication[HashCompute.GetMd5Hash("USUPERFIL")] = InternalCryptography.Criptografar("1");
+                cookieAuthentication[HashCompute.GetMd5Hash("USUNOME")] = InternalCryptography.Criptografar("Usuário Teste");
+                cookieAuthentication[HashCompute.GetMd5Hash("USUTOKEN")] = InternalCryptography.Criptografar("");
+
+                cookieAuthentication.Expires = DateTime.Now.AddMinutes(20);
+                filterContext.HttpContext.Response.Cookies.Add(cookieAuthentication);
+                CookieAuthentication = cookieAuthentication;
+            }
+
+            HttpCookie cookieConta = filterContext.HttpContext.Request.Cookies[HashCompute.GetMd5Hash("ALContaClienteCookie")];
+            if (cookieConta == null)
+            {
+                cookieConta = new HttpCookie(HashCompute.GetMd5Hash("ALContaClienteCookie"));
+
+                cookieConta[HashCompute.GetMd5Hash("CONTACOMPLETA")] = InternalCryptography.Criptografar("166154");
+                cookieConta[HashCompute.GetMd5Hash("CONTACODIGO")] = InternalCryptography.Criptografar("16615");
+                cookieConta[HashCompute.GetMd5Hash("CONTADIGITO")] = InternalCryptography.Criptografar("4");
+                cookieConta[HashCompute.GetMd5Hash("CONTATIPOREL")] = InternalCryptography.Criptografar("C");
+
+
+
+                cookieConta.Expires = DateTime.Now.AddMinutes(20);
+                filterContext.HttpContext.Response.Cookies.Add(cookieConta);
+            }
+
+#endif
